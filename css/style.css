@@ -38,7 +38,7 @@ body {
 }
     
 .aboutMe .uiShow{
-    background-image:url('img/me_nomac.png');
+    background-image:url('../img/me_nomac.png');
     background-size: 75% auto;
     background-position: 135% 106%;
 }
@@ -49,7 +49,7 @@ body {
     }
 }
 
-.aboutMe .uiShow.shy{ background-image:url('img/me_nomachove.png'); }
+.aboutMe .uiShow.shy{ background-image:url('../img/me_nomachove.png'); }
 
 .leftInfo{
     position: absolute;
@@ -208,7 +208,7 @@ p{
     display: none;
     width: 50px;
     height: 50px;
-    background-image: url('img/backBtn.png');
+    background-image: url('../img/backBtn.png');
     background-position: 0 0;
     background-color: white;
     border-radius: 100px;
@@ -349,7 +349,7 @@ p{
 .perBlock .pics .pic1{
     width: 100%;
     height: 50%;
-    background-image: url('img/ai_pics1.png');
+    background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
     -webkit-animation: rightCarosal 35s infinite;
     -moz-animation: rightCarosal 35s infinite;
@@ -381,7 +381,7 @@ p{
 .perBlock .pics .picOnly{
     width: 100%;
     height: 100%;
-    background-image: url('img/preview.jpg');
+    background-image: url('../img/preview.jpg');
     background-size: 100% auto ;
     background-repeat: no-repeat;
 }
@@ -389,7 +389,7 @@ p{
 .perBlock .pics .pic2{
     width: 100%;
     height: 50%;
-    background-image: url('img/ai_pics1.png');
+    background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
     -webkit-animation: leftCarosal 35s infinite;
     -moz-animation: leftCarosal 35s infinite;
@@ -448,7 +448,7 @@ p{
 .sign{
     width:200px;
     height: 70px;
-    background-image:url('img/lodersign.png'); 
+    background-image:url('../img/lodersign.png'); 
     -webkit-animation: lodersign 1.5s steps(34) forwards infinite alternate;
     -moz-animation: lodersign 1.5s steps(34) forwards infinite alternate;
     -o-animation: lodersign 1.5s steps(34) forwards infinite alternate;
