@@ -7,7 +7,5 @@ Just in CSS, JS, HTML and some awesome frameworks below:
 - [onepage-scroll](https://github.com/peachananr/onepage-scroll)
 - [animate.css](https://github.com/daneden/animate.css)
 
-The project is processing step-by-step, See it in action here: [jimfu.github.io](http://jimfu.github.io)
-
-## License
-[MIT License](https://github.com/meteoric/demo/blob/master/LICENSE)
+The project is processing step-by-step. 
+See it in action here: [http://jimfu.github.io](http://jimfu.github.io)
