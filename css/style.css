@@ -30,11 +30,15 @@ body {
     -o-transform-origin: 50% 100%;
     -ms-transform-origin: 50% 100%;
     transform-origin: 50% 100%;
-    -webkit-animation: rotateAnimate 1s infinite;
-    -moz-animation: rotateAnimate 1s infinite;
-    -o-animation: rotateAnimate 1s infinite;
-    -ms-animation: rotateAnimate 1s infinite;
-    animation: rotateAnimate 1s ease-in-out infinite alternate;
+    -webkit-animation: rotateAnimate 1s infinite alternate;
+    -moz-animation: rotateAnimate 1s infinite alternate;
+    -o-animation: rotateAnimate 1s infinite alternate;
+    -ms-animation: rotateAnimate 1s infinite alternate;
+    animation: rotateAnimate 1s infinite alternate;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
     transform: rotate(90deg);
 }
 #banHeight .rotatePhone:before{
@@ -45,11 +49,11 @@ body {
     top: 3px;
     left: 2px;
     border: 2px solid #FF8989;
-    -webkit-animation: colorAnimate 1s infinite;
-    -moz-animation: colorAnimate 1s infinite;
-    -o-animation: colorAnimate 1s infinite;
-    -ms-animation: colorAnimate 1s infinite;
-    animation: colorAnimate 1s ease-in-out infinite alternate;
+    -webkit-animation: colorAnimate 1s infinite alternate;
+    -moz-animation: colorAnimate 1s infinite alternate;
+    -o-animation: colorAnimate 1s infinite alternate;
+    -ms-animation: colorAnimate 1s infinite alternate;
+    animation: colorAnimate 1s infinite alternate;
 }
 #banHeight .rotatePhone:after{
     content: '';
@@ -60,61 +64,61 @@ body {
     bottom: 2px;
     left: 15px;
     border: 2px solid #FF8989;
-    -webkit-animation: colorAnimate 1s infinite;
-    -moz-animation: colorAnimate 1s infinite;
-    -o-animation: colorAnimate 1s infinite;
-    -ms-animation: colorAnimate 1s infinite;
-    animation: colorAnimate 1s ease-in-out infinite alternate;
+    -webkit-animation: colorAnimate 1s infinite alternate;
+    -moz-animation: colorAnimate 1s infinite alternate;
+    -o-animation: colorAnimate 1s infinite alternate;
+    -ms-animation: colorAnimate 1s infinite alternate;
+    animation: colorAnimate 1s infinite alternate;
 }
 @-webkit-keyframes rotateAnimate {
     0 {  -webkit-transform: rotate(-90deg);border-color:#FF8989; }
-    60%{  -webkit-transform: rotate(0deg);border-color:#5ED884; }
+    80%{  -webkit-transform: rotate(0deg);border-color:#5ED884; }
     100%{  -webkit-transform: rotate(0deg);border-color:#5ED884; }
 }
 @-moz-keyframes rotateAnimate {
     0 {  -moz-transform: rotate(-90deg);border-color:#FF8989; }
-    60%{  -moz-transform: rotate(0deg);border-color:#5ED884; }
+    80%{  -moz-transform: rotate(0deg);border-color:#5ED884; }
     100%{  -moz-transform: rotate(0deg);border-color:#5ED884; }
 }
 @-o-keyframes rotateAnimate {
     0 {  -o-transform: rotate(-90deg);border-color:#FF8989; }
-    60%{  -o-transform: rotate(0deg);border-color:#5ED884; }
+    80%{  -o-transform: rotate(0deg);border-color:#5ED884; }
     100%{  -o-transform: rotate(0deg);border-color:#5ED884; }
 }
 @-ms-keyframes rotateAnimate {
     0 {  -ms-transform: rotate(-90deg);border-color:#FF8989; }
-    60%{  -ms-transform: rotate(0deg);border-color:#5ED884; }
+    80%{  -ms-transform: rotate(0deg);border-color:#5ED884; }
     100%{  -ms-transform: rotate(0deg);border-color:#5ED884; }
 }
 @keyframes rotateAnimate {
     0 {  transform: rotate(-90deg);border-color:#FF8989; }
-    60%{  transform: rotate(0deg);border-color:#5ED884; }
+    80%{  transform: rotate(0deg);border-color:#5ED884; }
     100%{  transform: rotate(0deg);border-color:#5ED884; }
 }
 
 @-webkit-keyframes colorAnimate {
     0 { border-color:#FF8989; }
-    60%{ border-color:#5ED884; }
+    80%{ border-color:#5ED884; }
     100%{ border-color:#5ED884; }
 }
 @-moz-keyframes colorAnimate {
     0 { border-color:#FF8989; }
-    60%{ border-color:#5ED884; }
+    80%{ border-color:#5ED884; }
     100%{ border-color:#5ED884; }
 }
 @-o-keyframes colorAnimate {
     0 { border-color:#FF8989; }
-    60%{ border-color:#5ED884; }
+    80%{ border-color:#5ED884; }
     100%{ border-color:#5ED884; }
 }
 @-ms-keyframes colorAnimate {
     0 { border-color:#FF8989; }
-    60%{ border-color:#5ED884; }
+    80%{ border-color:#5ED884; }
     100%{ border-color:#5ED884; }
 }
 @keyframes colorAnimate {
     0 { border-color:#FF8989; }
-    60%{ border-color:#5ED884; }
+    80%{ border-color:#5ED884; }
     100%{ border-color:#5ED884; }
 }
 
