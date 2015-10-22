@@ -5,6 +5,119 @@ body {
 
 .right{ float: right; }
 
+#banHeight{
+    display:flex;
+    width: 100%;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+    background-color:white; 
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:1000000;  
+}    
+
+#banHeight .rotatePhone{
+    display: block;
+    position: relative;
+    width: 35px;
+    height: 64px;
+    border: 2px solid #FF8989;
+    border-radius: 5px;
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+    -webkit-animation: rotateAnimate 1s infinite;
+    -moz-animation: rotateAnimate 1s infinite;
+    -o-animation: rotateAnimate 1s infinite;
+    -ms-animation: rotateAnimate 1s infinite;
+    animation: rotateAnimate 1s ease-in-out infinite alternate;
+    transform: rotate(90deg);
+}
+#banHeight .rotatePhone:before{
+    content: '';
+    position: absolute;
+    width: 27px;
+    height: 48px;
+    top: 3px;
+    left: 2px;
+    border: 2px solid #FF8989;
+    -webkit-animation: colorAnimate 1s infinite;
+    -moz-animation: colorAnimate 1s infinite;
+    -o-animation: colorAnimate 1s infinite;
+    -ms-animation: colorAnimate 1s infinite;
+    animation: colorAnimate 1s ease-in-out infinite alternate;
+}
+#banHeight .rotatePhone:after{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    border-radius: 5px;
+    bottom: 2px;
+    left: 15px;
+    border: 2px solid #FF8989;
+    -webkit-animation: colorAnimate 1s infinite;
+    -moz-animation: colorAnimate 1s infinite;
+    -o-animation: colorAnimate 1s infinite;
+    -ms-animation: colorAnimate 1s infinite;
+    animation: colorAnimate 1s ease-in-out infinite alternate;
+}
+@-webkit-keyframes rotateAnimate {
+    0 {  -webkit-transform: rotate(-90deg);border-color:#FF8989; }
+    60%{  -webkit-transform: rotate(0deg);border-color:#5ED884; }
+    100%{  -webkit-transform: rotate(0deg);border-color:#5ED884; }
+}
+@-moz-keyframes rotateAnimate {
+    0 {  -moz-transform: rotate(-90deg);border-color:#FF8989; }
+    60%{  -moz-transform: rotate(0deg);border-color:#5ED884; }
+    100%{  -moz-transform: rotate(0deg);border-color:#5ED884; }
+}
+@-o-keyframes rotateAnimate {
+    0 {  -o-transform: rotate(-90deg);border-color:#FF8989; }
+    60%{  -o-transform: rotate(0deg);border-color:#5ED884; }
+    100%{  -o-transform: rotate(0deg);border-color:#5ED884; }
+}
+@-ms-keyframes rotateAnimate {
+    0 {  -ms-transform: rotate(-90deg);border-color:#FF8989; }
+    60%{  -ms-transform: rotate(0deg);border-color:#5ED884; }
+    100%{  -ms-transform: rotate(0deg);border-color:#5ED884; }
+}
+@keyframes rotateAnimate {
+    0 {  transform: rotate(-90deg);border-color:#FF8989; }
+    60%{  transform: rotate(0deg);border-color:#5ED884; }
+    100%{  transform: rotate(0deg);border-color:#5ED884; }
+}
+
+@-webkit-keyframes colorAnimate {
+    0 { border-color:#FF8989; }
+    60%{ border-color:#5ED884; }
+    100%{ border-color:#5ED884; }
+}
+@-moz-keyframes colorAnimate {
+    0 { border-color:#FF8989; }
+    60%{ border-color:#5ED884; }
+    100%{ border-color:#5ED884; }
+}
+@-o-keyframes colorAnimate {
+    0 { border-color:#FF8989; }
+    60%{ border-color:#5ED884; }
+    100%{ border-color:#5ED884; }
+}
+@-ms-keyframes colorAnimate {
+    0 { border-color:#FF8989; }
+    60%{ border-color:#5ED884; }
+    100%{ border-color:#5ED884; }
+}
+@keyframes colorAnimate {
+    0 { border-color:#FF8989; }
+    60%{ border-color:#5ED884; }
+    100%{ border-color:#5ED884; }
+}
+
 #loader{
     display:flex;
     width: 100%;
@@ -103,7 +216,7 @@ section .backShadow{
 }
 @media screen and (max-width: 1000px) {
     .info{
-        margin: 20vh 15%;
+        margin: 15% 15%;
     }
 }
 
