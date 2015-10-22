@@ -14,22 +14,41 @@
     <script src="js/jquery.onepage-scroll.js"></script>
     <script>
     //onload transform
-    window.addEventListener('DOMContentLoaded', function (e) { 
-            $('#loader').show();        
-    }, false);     
-    window.addEventListener('load', function (e) {
-        setTimeout(function(){
-            $('#loader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-                    $(this).hide();
-              });
-        },1500);
-    }, false);
+    // window.addEventListener('DOMContentLoaded', function (e) { 
+    //         $('#loader').show();        
+    // }, false);     
+    // window.addEventListener('load', function (e) {
+    //     setTimeout(function(){
+    //         $('#loader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+    //                 $(this).hide();
+    //           });
+    //     },1500);
+    // }, false);
+    function orient() {
+        if (window.orientation == 0 || window.orientation == 180) {
+            return false;
+        }
+        else if (window.orientation == 90 || window.orientation == -90) {
+            window.orientation = 0;
+            return false;
+        }
+    }
+
+    /* 在页面加载的时候调用 */
+    $(function(){
+        orient();
+    });
+
+    /* 在用户变化屏幕显示方向的时候调用*/
+    $(window).bind( 'orientationchange', function(e){
+        orient();
+    });
     </script>
 </head>
 <body>
-    <div id="loader">
+<!--     <div id="loader">
         <div class="sign"></div>
-    </div>
+    </div> -->
     <span class="backBtn fade animated fadeIn"></span>
 
     <div class="main">
@@ -288,8 +307,10 @@ $(".main").onepage_scroll({
     direction: "vertical"            
 });
 
+
 $(function(){
     $('.info button').on('click',function(){
+        $(document).scrollTop(0,0);
         $(this).parents('section').addClass('expand');
         $('.backBtn').removeClass('fadeOut').show();
         $(".onepage-pagination").fadeOut();
@@ -314,6 +335,7 @@ $(function(){
         $('.aboutMe .uiShow').removeClass('shy');
     });
 
+    
 });
 </script>
 </html>
