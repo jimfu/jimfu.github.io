@@ -2,8 +2,8 @@ body {
     font-size:18px ;
     background-color:#ffffff;
 }
-
-.right{ float: right; }
+.left{ float: left; }
+.right{ float: right!important; }
 
 .onepage-pagination li a:focus{
     outline: 0;
@@ -429,6 +429,7 @@ p{
     width:30%;
     height: 100%;
     position: relative;
+    float: left;
 }
 @media screen and (max-width: 1000px) {
     .perBlock .murmur{
@@ -474,6 +475,7 @@ p{
     width:70%;
     height: 100%;
     position: relative;
+    float: left;
 }
 @media screen and (max-width: 1000px) {
     .perBlock .pics{
@@ -486,10 +488,10 @@ p{
     height: 50%;
     background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
-    -webkit-animation: rightCarosal 35s infinite;
-    -moz-animation: rightCarosal 35s infinite;
-    -o-animation: rightCarosal 35s infinite;
-    -ms-animation: rightCarosal 35s infinite;
+    -webkit-animation: rightCarosal 35s infinite alternate;
+    -moz-animation: rightCarosal 35s infinite alternate;
+    -o-animation: rightCarosal 35s infinite alternate;
+    -ms-animation: rightCarosal 35s infinite alternate;
     animation: rightCarosal 35s linear infinite alternate;
 }
 @-webkit-keyframes rightCarosal {
@@ -514,10 +516,10 @@ p{
 }
 
 .perBlock .pics .pic1.forPhone{
-    -webkit-animation: phoneRightCarosal 5s infinite;
-    -moz-animation: phoneRightCarosal 5s infinite;
-    -o-animation: phoneRightCarosal 5s infinite;
-    -ms-animation: phoneRightCarosal 5s infinite;
+    -webkit-animation: phoneRightCarosal 5s infinite alternate;
+    -moz-animation: phoneRightCarosal 5s infinite alternate;
+    -o-animation: phoneRightCarosal 5s infinite alternate;
+    -ms-animation: phoneRightCarosal 5s infinite alternate;
     animation: phoneRightCarosal 5s linear infinite alternate;
 }
 @-webkit-keyframes phoneRightCarosal {
@@ -555,10 +557,10 @@ p{
     height: 50%;
     background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
-    -webkit-animation: leftCarosal 35s infinite;
-    -moz-animation: leftCarosal 35s infinite;
-    -o-animation: leftCarosal 35s infinite;
-    -ms-animation: leftCarosal 35s infinite;
+    -webkit-animation: leftCarosal 35s infinite alternate;
+    -moz-animation: leftCarosal 35s infinite alternate;
+    -o-animation: leftCarosal 35s infinite alternate;
+    -ms-animation: leftCarosal 35s infinite alternate;
     animation: leftCarosal 35s linear infinite alternate;
 }
 @-webkit-keyframes leftCarosal {
@@ -583,10 +585,10 @@ p{
 }
 
 .perBlock .pics .pic2.forPhone{
-    -webkit-animation: phoneLeftCarosal 5s infinite;
-    -moz-animation: phoneLeftCarosal 5s infinite;
-    -o-animation: phoneLeftCarosal 5s infinite;
-    -ms-animation: phoneLeftCarosal 5s infinite;
+    -webkit-animation: phoneLeftCarosal 5s infinite alternate;
+    -moz-animation: phoneLeftCarosal 5s infinite alternate;
+    -o-animation: phoneLeftCarosal 5s infinite alternate;
+    -ms-animation: phoneLeftCarosal 5s infinite alternate;
     animation: phoneLeftCarosal 5s linear infinite alternate;
 }
 @-webkit-keyframes phoneLeftCarosal {
