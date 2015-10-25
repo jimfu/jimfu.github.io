@@ -114,7 +114,7 @@ function srollPageDisabled(){
 }
 
 function orient() {
-    if(document.body.clientHeight < 500){
+    if(document.body.clientHeight < 450){
         $('#banHeight').css('display','flex');
     }else{
         $('#banHeight').hide();
