@@ -110,6 +110,27 @@ function srollPageDisabled(){
 		    sectionContainer: "section",                   
 		    responsiveFallback: true                          
 		});
+		$('#mePage').on('click',function(){
+			window.location.assign("http://jimfu.github.io/me_page.html");
+		});
+		$('#aiPage').on('click',function(){
+			
+		});
+		$('#motPage').on('click',function(){
+
+		});
+		$('#goPage').on('click',function(){
+
+		});
+		$('#resumePage').on('click',function(){
+
+		});
+		$('#tkdPage').on('click',function(){
+
+		});
+		$('.backBtn').on('click',function(){
+			window.location.assign("http://jimfu.github.io/");
+		});
 	});
 }
 
