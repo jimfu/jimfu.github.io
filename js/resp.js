@@ -114,22 +114,19 @@ function srollPageDisabled(){
 			window.location.assign("http://jimfu.github.io/me_page.html");
 		});
 		$('#aiPage').on('click',function(){
-			
+			window.location.assign("http://jimfu.github.io/ai_page.html");
 		});
 		$('#motPage').on('click',function(){
-
+			window.location.assign("http://jimfu.github.io/mot_page.html");
 		});
 		$('#goPage').on('click',function(){
-
+			window.location.assign("http://jimfu.github.io/go_page.html");
 		});
 		$('#resumePage').on('click',function(){
-
+			window.location.assign("http://jimfu.github.io/resume_page.html");
 		});
 		$('#tkdPage').on('click',function(){
-
-		});
-		$('.backBtn').on('click',function(){
-			window.location.assign("http://jimfu.github.io/");
+			window.location.assign("http://jimfu.github.io/tkd_page.html");
 		});
 	});
 }
