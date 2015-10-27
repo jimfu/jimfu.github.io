@@ -286,7 +286,7 @@ section .backShadow{
 
 section.expand .leftInfo{
     width: 100%;
-    overflow: auto;
+    overflow-y: auto;
 }
 
 section.expand .backShadow{
