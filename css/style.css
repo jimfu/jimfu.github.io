@@ -616,6 +616,7 @@ p{
 .murmurTitle{
     margin: 100px 100px 30px 100px;
     font-family: sans-serif;
+    font-weight: bold;
     color: white;
     font-size: 1.5vw;
     padding-left: 20px;
