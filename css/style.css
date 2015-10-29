@@ -156,21 +156,28 @@ body {
         background-position: 0 30vh;
     }
 }
-    
+.aboutMe .info, .aboutMe .info p{ color:black; }   
+
 .aboutMe .uiShow{
     background-image:url('../img/me_nomac.png');
     background-size: 75% auto;
     background-position: 135% 106%;
 }
+
 @media screen and (max-width: 1000px) {
     .aboutMe .uiShow{
         background-size: 100vh auto;
         background-position: 0% 40vh;
     }
 }
-
+.step1{ color: #B456E2; }
+.step2{ color: #4866FF; }
+.step3{ color: #04ACFF; }
 .aboutMe .uiShow.shy{ background-image:url('../img/me_nomachove.png'); }
-
+.emailLink{
+    color:white;
+    border-bottom:1px solid white;
+}
 .leftInfo{
     position: absolute;
     left: 0;
@@ -305,6 +312,7 @@ body.disabled-onepage-scroll section:nth-child(3){ background-color:#91b4ce; }
 body.disabled-onepage-scroll section:nth-child(4){ background-color:#1af0b8; }
 body.disabled-onepage-scroll section:nth-child(5){ background-color:#dedede; }
 body.disabled-onepage-scroll section:nth-child(6){ background-color:#3d3d50; }
+body.disabled-onepage-scroll section:nth-child(7){ background-color:#2c2c34;; }
 body.disabled-onepage-scroll section:first-child .backShadow{ background-color:#ffffff; }
 body.disabled-onepage-scroll section:nth-child(2) .backShadow{ background-color:#76bcc1; }
 body.disabled-onepage-scroll section:nth-child(3) .backShadow{ background-color:#6f6eb0; }
@@ -517,11 +525,11 @@ p{
 }
 
 .perBlock .pics .pic1.forPhone{
-    -webkit-animation: phoneRightCarosal 13s linear infinite alternate;
-    -moz-animation: phoneRightCarosal 13s linear infinite alternate;
-    -o-animation: phoneRightCarosal 13s linear infinite alternate;
-    -ms-animation: phoneRightCarosal 13s linear infinite alternate;
-    animation: phoneRightCarosal 13s linear infinite alternate;
+    -webkit-animation: phoneRightCarosal 16s linear infinite alternate;
+    -moz-animation: phoneRightCarosal 16s linear infinite alternate;
+    -o-animation: phoneRightCarosal 16s linear infinite alternate;
+    -ms-animation: phoneRightCarosal 16s linear infinite alternate;
+    animation: phoneRightCarosal 16s linear infinite alternate;
 }
 @-webkit-keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
@@ -586,11 +594,11 @@ p{
 }
 
 .perBlock .pics .pic2.forPhone{
-    -webkit-animation: phoneLeftCarosal 13s linear infinite alternate;
-    -moz-animation: phoneLeftCarosal 13s linear infinite alternate;
-    -o-animation: phoneLeftCarosal 13s linear infinite alternate;
-    -ms-animation: phoneLeftCarosal 13s linear infinite alternate;
-    animation: phoneLeftCarosal 13s linear infinite alternate;
+    -webkit-animation: phoneLeftCarosal 16s linear infinite alternate;
+    -moz-animation: phoneLeftCarosal 16s linear infinite alternate;
+    -o-animation: phoneLeftCarosal 16s linear infinite alternate;
+    -ms-animation: phoneLeftCarosal 16s linear infinite alternate;
+    animation: phoneLeftCarosal 16s linear infinite alternate;
 }
 @-webkit-keyframes phoneLeftCarosal {
     0% { background-position: 2820px 0 }
@@ -777,3 +785,137 @@ section:nth-child(6) .murmurTitle{ border-color:rgb(221, 9, 23); }
     border: 1px solid #a8b1d4;
     text-decoration: none;
 }
+
+.hoverHead{
+    padding: 20% 0;
+    text-align: center;
+    height: 20%;
+}
+.hoverHead img{
+    height: 100%;
+    border-radius: 1000px;
+    -webkit-animation: colorWheel 400ms linear infinite alternate;
+    -moz-animation: colorWheel 400ms linear infinite alternate;
+    -o-animation: colorWheel 400ms linear infinite alternate;
+    -ms-animation: colorWheel 400ms linear infinite alternate;
+    animation: colorWheel 400ms linear infinite alternate;
+}
+
+@-webkit-keyframes colorWheel {
+    0% {    box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 25px rgba(118,188,193,0.2),
+                        0 0 0 10px rgba(111,110,176,0.2),
+                        0 0 0 15px rgba(8,183,178,0.2),
+                        0 0 0 10px #333333,
+                        0 0 0 5px rgba(221,9,23,0.2); 
+    }
+    100% {  box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 10px rgba(118,188,193,0.2),
+                        0 0 0 30px rgba(111,110,176,0.2),
+                        0 0 0 30px rgba(8,183,178,0.2),
+                        0 0 0 15px rgb(242, 245, 45),
+                        0 0 0 15px rgba(221,9,23,0.2); 
+    }
+}
+@-moz-keyframes colorWheel {
+    0% {    box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 25px rgba(118,188,193,0.2),
+                        0 0 0 10px rgba(111,110,176,0.2),
+                        0 0 0 15px rgba(8,183,178,0.2),
+                        0 0 0 10px #333333,
+                        0 0 0 5px rgba(221,9,23,0.2); 
+    }
+    100% {  box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 10px rgba(118,188,193,0.2),
+                        0 0 0 30px rgba(111,110,176,0.2),
+                        0 0 0 30px rgba(8,183,178,0.2),
+                        0 0 0 15px rgb(242, 245, 45),
+                        0 0 0 15px rgba(221,9,23,0.2); 
+    }
+}
+@-o-keyframes colorWheel {
+    0% {    box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 25px rgba(118,188,193,0.2),
+                        0 0 0 10px rgba(111,110,176,0.2),
+                        0 0 0 15px rgba(8,183,178,0.2),
+                        0 0 0 10px #333333,
+                        0 0 0 5px rgba(221,9,23,0.2); 
+    }
+    100% {  box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 10px rgba(118,188,193,0.2),
+                        0 0 0 30px rgba(111,110,176,0.2),
+                        0 0 0 30px rgba(8,183,178,0.2),
+                        0 0 0 15px rgb(242, 245, 45),
+                        0 0 0 15px rgba(221,9,23,0.2); 
+    }
+}
+@-ms-keyframes colorWheel {
+    0% {    box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 25px rgba(118,188,193,0.2),
+                        0 0 0 10px rgba(111,110,176,0.2),
+                        0 0 0 15px rgba(8,183,178,0.2),
+                        0 0 0 10px #333333,
+                        0 0 0 5px rgba(221,9,23,0.2); 
+    }
+    100% {  box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 10px rgba(118,188,193,0.2),
+                        0 0 0 30px rgba(111,110,176,0.2),
+                        0 0 0 30px rgba(8,183,178,0.2),
+                        0 0 0 15px rgb(242, 245, 45),
+                        0 0 0 15px rgba(221,9,23,0.2); 
+    }
+}
+@keyframes colorWheel {
+    0% {    box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 25px rgba(118,188,193,0.2),
+                        0 0 0 10px rgba(111,110,176,0.2),
+                        0 0 0 15px rgba(8,183,178,0.2),
+                        0 0 0 10px #333333,
+                        0 0 0 5px rgba(221,9,23,0.2); 
+    }
+    100% {  box-shadow: 0 0 0 5px rgba(255,255,255,0.2),
+                        0 0 0 10px rgba(118,188,193,0.2),
+                        0 0 0 30px rgba(111,110,176,0.2),
+                        0 0 0 30px rgba(8,183,178,0.2),
+                        0 0 0 15px rgb(242, 245, 45),
+                        0 0 0 15px rgba(221,9,23,0.2); 
+    }
+}
+.flirt{
+    color: white;
+    padding: 10px;
+
+}
+.hoverHead a{
+    color: #52647d;
+    margin: 0 10px;
+    position:relative;
+}
+.hoverHead a:after{
+    position:absolute;
+    left:0;
+    top:0;
+    width: 0;
+    overflow: hidden;
+    display: block;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.hoverHead a:first-child:after{ content:"Linkedin"; }
+.hoverHead a:nth-child(2):after{ content:"Resume"; }
+.hoverHead a:nth-child(3):after{ content:"Pinterest"; }
+.hoverHead a:hover:after{
+    width: 100%;
+    color:white;
+    overflow-x: hidden;
+    text-decoration: underline;
+    -webkit-transition: all 200ms ease;
+    -moz-transition: all 200ms ease;
+    -ms-transition: all 200ms ease;
+    -o-transition: all 200ms ease;
+    transition: all 200ms ease;
+}
+.linkPack{ color: white }

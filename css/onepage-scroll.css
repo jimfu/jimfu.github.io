@@ -76,6 +76,7 @@ body, .onepage-wrapper, html {
 .onepage-pagination li:nth-child(4):before{ content: 'GOaWAY'; }
 .onepage-pagination li:nth-child(5):before{ content: 'Resume Beta'; }
 .onepage-pagination li:nth-child(6):before{ content: 'TaeKwonDo'; }
+.onepage-pagination li:nth-child(7):before{ content: 'Want me more?'; }
 .onepage-pagination li a:before{
   content: '';
   position: absolute;
