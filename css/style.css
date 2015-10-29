@@ -497,51 +497,51 @@ p{
 }
 @-webkit-keyframes rightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 600% 0  }
+    100% {  background-position: 5200px 0  }
 }
 @-moz-keyframes rightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 600% 0  }
+    100% {  background-position: 5200px 0  }
 }
 @-o-keyframes rightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 600% 0  }
+    100% {  background-position: 5200px 0  }
 }
 @-ms-keyframes rightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 600% 0  }
+    100% {  background-position: 5200px 0  }
 }
 @keyframes rightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 600% 0  }
+    100% {  background-position: 5200px 0  }
 }
 
 .perBlock .pics .pic1.forPhone{
-    -webkit-animation: phoneRightCarosal 5s infinite alternate;
-    -moz-animation: phoneRightCarosal 5s infinite alternate;
-    -o-animation: phoneRightCarosal 5s infinite alternate;
-    -ms-animation: phoneRightCarosal 5s infinite alternate;
-    animation: phoneRightCarosal 5s linear infinite alternate;
+    -webkit-animation: phoneRightCarosal 13s linear infinite alternate;
+    -moz-animation: phoneRightCarosal 13s linear infinite alternate;
+    -o-animation: phoneRightCarosal 13s linear infinite alternate;
+    -ms-animation: phoneRightCarosal 13s linear infinite alternate;
+    animation: phoneRightCarosal 13s linear infinite alternate;
 }
 @-webkit-keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 1410px 0  }
+    100% {  background-position: 2820px 0  }
 }
 @-moz-keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 1410px 0  }
+    100% {  background-position: 2820px 0  }
 }
 @-o-keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 1410px 0  }
+    100% {  background-position: 2820px 0  }
 }
 @-ms-keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 1410px 0  }
+    100% {  background-position: 2820px 0  }
 }
 @keyframes phoneRightCarosal {
     0% { background-position: 0 0 }
-    100% {  background-position: 1410px 0  }
+    100% {  background-position: 2820px 0  }
 }
 
 .perBlock .pics .picOnly{
@@ -558,58 +558,58 @@ p{
     height: 50%;
     background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
-    -webkit-animation: leftCarosal 35s infinite alternate;
-    -moz-animation: leftCarosal 35s infinite alternate;
-    -o-animation: leftCarosal 35s infinite alternate;
-    -ms-animation: leftCarosal 35s infinite alternate;
+    -webkit-animation: leftCarosal 35s linear infinite alternate;
+    -moz-animation: leftCarosal 35s linear infinite alternate;
+    -o-animation: leftCarosal 35s linear infinite alternate;
+    -ms-animation: leftCarosal 35s linear infinite alternate;
     animation: leftCarosal 35s linear infinite alternate;
 }
 @-webkit-keyframes leftCarosal {
-    0% { background-position: 700% 0 }
-    100% {  background-position: 100% 0 }
+    0% { background-position: 5200px 0 }
+    100% {  background-position: 0 0 }
 }
 @-moz-keyframes leftCarosal {
-    0% { background-position: 700% 0 }
-    100% {  background-position: 100% 0 }
+    0% { background-position: 5200px 0 }
+    100% {  background-position: 0 0 }
 }
 @-o-keyframes leftCarosal {
-    0% { background-position: 700% 0 }
-    100% {  background-position: 100% 0 }
+    0% { background-position: 5200px 0 }
+    100% {  background-position: 0% 0 }
 }
 @-ms-keyframes leftCarosal {
-    0% { background-position: 700% 0 }
-    100% {  background-position: 100% 0 }
+    0% { background-position: 5200px 0 }
+    100% {  background-position: 0% 0 }
 }
 @keyframes leftCarosal {
-    0% { background-position: 700% 0 }
-    100% {  background-position: 100% 0 }
+    0% { background-position: 5200px 0 }
+    100% {  background-position: 0% 0 }
 }
 
 .perBlock .pics .pic2.forPhone{
-    -webkit-animation: phoneLeftCarosal 5s infinite alternate;
-    -moz-animation: phoneLeftCarosal 5s infinite alternate;
-    -o-animation: phoneLeftCarosal 5s infinite alternate;
-    -ms-animation: phoneLeftCarosal 5s infinite alternate;
-    animation: phoneLeftCarosal 5s linear infinite alternate;
+    -webkit-animation: phoneLeftCarosal 13s infinite alternate;
+    -moz-animation: phoneLeftCarosal 13s infinite alternate;
+    -o-animation: phoneLeftCarosal 13s infinite alternate;
+    -ms-animation: phoneLeftCarosal 13s infinite alternate;
+    animation: phoneLeftCarosal 13s linear infinite alternate;
 }
 @-webkit-keyframes phoneLeftCarosal {
-    0% { background-position: 1410px 0 }
+    0% { background-position: 2820px 0 }
     100% {  background-position: 0 0  }
 }
 @-moz-keyframes phoneLeftCarosal {
-    0% { background-position: 1410px 0 }
+    0% { background-position: 2820px 0 }
     100% {  background-position: 0 0  }
 }
 @-o-keyframes phoneLeftCarosal {
-    0% { background-position: 1410px 0 }
+    0% { background-position: 2820px 0 }
     100% {  background-position: 0 0  }
 }
 @-ms-keyframes phoneLeftCarosal {
-    0% { background-position: 1410px 0 }
+    0% { background-position: 2820px 0 }
     100% {  background-position: 0 0  }
 }
 @keyframes phoneLeftCarosal {
-    0% { background-position: 1410px 0 }
+    0% { background-position: 2820px 0 }
     100% {  background-position: 0 0  }
 }
 
