@@ -489,10 +489,10 @@ p{
     height: 50%;
     background-image: url('../img/ai_pics1.png');
     background-size: auto 100%;
-    -webkit-animation: rightCarosal 35s infinite alternate;
-    -moz-animation: rightCarosal 35s infinite alternate;
-    -o-animation: rightCarosal 35s infinite alternate;
-    -ms-animation: rightCarosal 35s infinite alternate;
+    -webkit-animation: rightCarosal 35s linear infinite alternate;
+    -moz-animation: rightCarosal 35s linear infinite alternate;
+    -o-animation: rightCarosal 35s linear infinite alternate;
+    -ms-animation: rightCarosal 35s linear infinite alternate;
     animation: rightCarosal 35s linear infinite alternate;
 }
 @-webkit-keyframes rightCarosal {
@@ -586,10 +586,10 @@ p{
 }
 
 .perBlock .pics .pic2.forPhone{
-    -webkit-animation: phoneLeftCarosal 13s infinite alternate;
-    -moz-animation: phoneLeftCarosal 13s infinite alternate;
-    -o-animation: phoneLeftCarosal 13s infinite alternate;
-    -ms-animation: phoneLeftCarosal 13s infinite alternate;
+    -webkit-animation: phoneLeftCarosal 13s linear infinite alternate;
+    -moz-animation: phoneLeftCarosal 13s linear infinite alternate;
+    -o-animation: phoneLeftCarosal 13s linear infinite alternate;
+    -ms-animation: phoneLeftCarosal 13s linear infinite alternate;
     animation: phoneLeftCarosal 13s linear infinite alternate;
 }
 @-webkit-keyframes phoneLeftCarosal {
