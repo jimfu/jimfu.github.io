@@ -58,6 +58,8 @@ function srollPage(){
 		        }else if(index == 6){
 		            $('body').css('background-color','#3d3d50');
 		            $('.backShadow').css('background-color','#dd0917');
+		        }else if(index == 7){
+		            $('body').css('background-color','#2c2c34');
 		        }
 		        $('.leftInfo').hide().fadeIn();
 		    },  
