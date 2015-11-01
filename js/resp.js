@@ -8,6 +8,7 @@ window.addEventListener('load', function (e) {
     setTimeout(function(){
         $('#loader').addClass('animated fadeOut').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
             $(this).hide();
+            $('.thumbnail').hide();
       	});
     },1500);
 }, false);
