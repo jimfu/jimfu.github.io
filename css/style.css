@@ -791,7 +791,7 @@ section:nth-child(6) .murmurTitle{ border-color:rgb(221, 9, 23); }
     text-align: center;
     height: 20%;
 }
-.hoverHead img{
+.hoverHead img.sunGlass{
     height: 100%;
     border-radius: 1000px;
     -webkit-animation: colorWheel 400ms linear infinite alternate;
@@ -942,4 +942,7 @@ section:nth-child(6) .murmurTitle{ border-color:rgb(221, 9, 23); }
 }
 .backToTop:hover{
     opacity: 0.8;
+}
+.thumbnail{
+    width: 0;
 }
