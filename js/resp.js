@@ -1,7 +1,7 @@
 //preloader
 window.addEventListener('DOMContentLoaded', function (e) { 
         $('#loader').show();
-        //preload('./img/ai_paint.jpg','./img/ai_pics1.png','./img/ai_pics2.png','./img/ai_prototype.jpg','./img/go_logo.png','./img/go_pics1.png','./img/go_pics2.png','./img/go_prototype.jpg','./img/go_workflow.png','./img/me_desk.jpg','./img/me_myself.jpg','./img/me_nomachove.png','./img/mot_pics1.png','./img/mot_pics2.png','./img/mot_prototype.jpg','./img/resume_webconcept.png','./img/tkd_webconcept.png','./img/go_webconcept.png');     
+        preload('./img/ai_pics1.png','./img/ai_pics2.png','./img/go_pics1.png','./img/go_pics2.png','./img/me_nomachove.png','./img/mot_pics1.png','./img/mot_pics2.png');     
 }, false);     
 window.addEventListener('load', function (e) {
 	//wait till once time animation end
