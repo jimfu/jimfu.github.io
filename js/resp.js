@@ -1,7 +1,7 @@
 //preloader
 window.addEventListener('DOMContentLoaded', function (e) { 
         $('#loader').show();
-        preload('./img/ai_paint.jpg','./img/ai_pics1.png','./img/ai_pics2.png','./img/ai_prototype.jpg','./img/go_logo.png','./img/go_pics1.png','./img/go_pics2.png','./img/go_prototype.jpg','./img/go_workflow.png','./img/me_desk.jpg','./img/me_myself.jpg','./img/me_nomachove.png','./img/mot_pics1.png','./img/mot_pics2.png','./img/mot_prototype.jpg','./img/resume_webconcept.png','./img/tkd_webconcept.png','./img/go_webconcept.png');     
+        //preload('./img/ai_paint.jpg','./img/ai_pics1.png','./img/ai_pics2.png','./img/ai_prototype.jpg','./img/go_logo.png','./img/go_pics1.png','./img/go_pics2.png','./img/go_prototype.jpg','./img/go_workflow.png','./img/me_desk.jpg','./img/me_myself.jpg','./img/me_nomachove.png','./img/mot_pics1.png','./img/mot_pics2.png','./img/mot_prototype.jpg','./img/resume_webconcept.png','./img/tkd_webconcept.png','./img/go_webconcept.png');     
 }, false);     
 window.addEventListener('load', function (e) {
 	//wait till once time animation end
@@ -66,7 +66,7 @@ function srollPage(){
 		    afterMove: function(index) {
 		        $('.leftInfo').fadeIn();
 		    },  
-		    loop: true,                     
+		    loop: false,                     
 		    keyboard: true,                  
 		    responsiveFallback: false,                          
 		    direction: "vertical"            
@@ -101,6 +101,14 @@ function srollPage(){
 	    }).on('mouseleave',function(){
 	        $('.aboutMe .uiShow').removeClass('shy');
 	    });
+	    $('.sunGlass').on('mouseover',function(){
+	        $('.hoverHead').find('img').attr('src','img/jim_hover.jpg');
+	    }).on('mouseleave',function(){
+	        $('.hoverHead').find('img').attr('src','img/jim.jpg');
+	    });
+	    $('.backToTop').on('click',function(){
+	    	$(".main").moveTo(1);
+	    });
 	});
 	
 
@@ -113,7 +121,9 @@ function srollPageDisabled(){
 		    responsiveFallback: true                          
 		});
 		$('#mePage').on('click',function(){
-			window.location.assign("http://jimfu.github.io/me_page.html");
+			// var windowLocation = ;
+			console.log(window.location.hostname);
+			// window.location.assign("http://jimfu.github.io/me_page.html");
 		});
 		$('#aiPage').on('click',function(){
 			window.location.assign("http://jimfu.github.io/ai_page.html");
@@ -130,6 +140,7 @@ function srollPageDisabled(){
 		$('#tkdPage').on('click',function(){
 			window.location.assign("http://jimfu.github.io/tkd_page.html");
 		});
+		$('.backToTop').hide();
 	});
 }
 
