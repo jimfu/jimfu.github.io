@@ -945,7 +945,9 @@ section:nth-child(6) .murmurTitle{ border-color:rgb(221, 9, 23); }
 .thumbnail{
     width: 0;
 }
-
+.gitPushTest{
+    
+}
 .warning{
     display: block;
     font-size: 14px;
