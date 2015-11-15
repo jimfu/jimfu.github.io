@@ -1,6 +1,6 @@
 
 # Jim Fu's Portfolio
-[![Jimin Fu](http://jimfu.github.io/img/demo.png "Jimin Fu")](http://jimfu.github.io/)
+[![Jimin Fu](http://jimfu.github.io/img/my_thumbnail.png "Jimin Fu")](http://jimfu.github.io/)
 
 This is my own first portfolio website with at least two years experience in front-end and UI design works.
 Just in CSS, JS, HTML and some awesome frameworks below:
