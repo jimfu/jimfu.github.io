@@ -92,7 +92,7 @@ body, .onepage-wrapper, html {
   width: 8px;
   height: 8px;
   background: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid rgb(154, 154, 154);
   margin-top: -4px;
   left: 10px;
 }
