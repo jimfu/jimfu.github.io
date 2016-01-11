@@ -35,8 +35,8 @@ function srollPage(){
 		//call onepage_scroll
 		$(".main").onepage_scroll({
 		    sectionContainer: "section",    
-		    easing: "ease-in-out",                                                     
-		    animationTime: 750,            
+		    easing: "cubic-bezier(0.55, 0.085, 0, 0.99)",                                                     
+		    animationTime: 800,            
 		    pagination: true,                
 		    updateURL: false,                
 		    beforeMove: function(index) {

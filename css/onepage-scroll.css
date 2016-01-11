@@ -30,7 +30,7 @@ body, .onepage-wrapper, html {
 
 .onepage-pagination {
   position: absolute;
-  right: 10px;
+  right: 50px;
   top: 50%;
   z-index: 5;
   list-style: none;
@@ -92,9 +92,39 @@ body, .onepage-wrapper, html {
   width: 8px;
   height: 8px;
   background: rgba(255, 255, 255, 1);
-  border: 1px solid rgb(154, 154, 154);
+  border: 1px solid rgba(154, 154, 154,0);
   margin-top: -4px;
   left: 10px;
+  -webkit-animation: activePoint 1s linear infinite;
+  -moz-animation: activePoint 1s linear infinite;
+  -o-animation: activePoint 1s linear infinite;
+  -ms-animation: activePoint 1s linear infinite;
+  animation: activePoint 1s linear infinite;
+  box-shadow: 0 0 0 0 white;
+}
+.onepage-pagination li:first-child a.active:before{
+  box-shadow: 0 0 0 0 #555;
+  background: #555;
+}
+/*@-webkit-keyframes activePoint {
+  0 {  box-shadow: 0 0 0 23px rgba(0,0,0,1) }
+  100%{  box-shadow: 0 0 0 10px rgba(0,0,0,0) }
+}*/
+@-moz-keyframes activePoint {
+  0% {  background-position: 0 0 }
+  100%{  background-position: 0 -2380px }
+}
+@-o-keyframes activePoint {
+  0% {  background-position: 0 0 }
+  100%{  background-position: 0 -2380px }
+}
+@-ms-keyframes activePoint {
+  0% {  background-position: 0 0 }
+  100%{  background-position: 0 -2380px }
+}
+@keyframes activePoint {
+  70%{  box-shadow: 0 0 0 8px rgba(0,0,0,0) }
+  100%{  box-shadow: 0 0 0 8px rgba(0,0,0,0) }
 }
 
 .disabled-onepage-scroll, .disabled-onepage-scroll .wrapper {
