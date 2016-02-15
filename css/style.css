@@ -249,9 +249,10 @@ section .backShadow{
     margin: 0;
     padding-bottom: 3%;
     font-family: 'Roboto', sans-serif;
-    font-size:4vw;
+    font-size: 3.5vw;
     border-bottom: 5px solid white;
 }
+section:first-child .info h1{ font-size: 4vw; }
 @media screen and (max-width: 1000px) {
     .info h1.borderNone{
         border-color:rgba(0,0,0,0);
@@ -260,7 +261,34 @@ section .backShadow{
         font-size:32px;  
     }
 }
-
+section .uiShow:before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    font-family: 'Roboto', sans-serif;
+    transform-origin: 0 0;
+    transform:  translateY(-53%) rotate(-90deg);
+    transition: all 1250ms cubic-bezier(0.55, 0.085, 0, 0.99) 500ms;
+    font-size: 6vw;
+    white-space:nowrap;
+    color: white;
+    z-index: 1;
+    opacity: 0;
+    width: inherit;
+}
+section:nth-child(2) .uiShow:before{ content:'AI GROUP EIP';/*color: #3D988C;*/ }
+section:nth-child(3) .uiShow:before{ content:'MOT EIP';/*    color: #32648C; */}
+section:nth-child(4) .uiShow:before{ content:'GOAWAY';    /*color: #2F967C;*/ }
+section:nth-child(5) .uiShow:before{ content:'RESUME BETA';    /*color: #444444;*/ }
+section:nth-child(6) .uiShow:before{ content:'TAEKWONDO';     /*color: #5A0808;*/}
+section.expand .uiShow:before{ display: none; }
+@media screen and (max-width: 1000px) {
+    section .uiShow:before{
+        display: none;
+    }
+}
+section.active .uiShow:before { transform: translateY(53%) rotate(-90deg);opacity: 0.25; }
 .info p{
     font-family: 'PT Sans', sans-serif;
     font-size:20px;

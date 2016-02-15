@@ -45,7 +45,7 @@ function srollPage(){
 		            $('.backShadow').css('background-color','#ffffff');
 		        }else if(index == 2){
 		            $('body').css('background-color','#c8e1c4');
-		            $('.backShadow').css('background-color','#76bcc1');
+		            $('.backShadow').css('background-color','rgb(75, 180, 187)');
 		        }else if(index == 3){
 		            $('body').css('background-color','#91b4ce');
 		            $('.backShadow').css('background-color','#6f6eb0');
