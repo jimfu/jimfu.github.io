@@ -44,21 +44,24 @@ function srollPage(){
 		            $('body').css('background-color','#ffffff');
 		            $('.backShadow').css('background-color','#ffffff');
 		        }else if(index == 2){
-		            $('body').css('background-color','#c8e1c4');
-		            $('.backShadow').css('background-color','rgb(75, 180, 187)');
+		            $('body').css('background-color','rgb(255, 171, 205)');
+		            $('.backShadow').css('background-color','rgb(173, 14, 60)');
 		        }else if(index == 3){
-		            $('body').css('background-color','#91b4ce');
-		            $('.backShadow').css('background-color','#6f6eb0');
+		            $('body').css('background-color','rgb(226, 255, 222)');
+		            $('.backShadow').css('background-color','rgb(26, 173, 183)');
 		        }else if(index == 4){
+		            $('body').css('background-color','rgb(142, 203, 249)');
+		            $('.backShadow').css('background-color','#6f6eb0');
+		        }else if(index == 5){
 		            $('body').css('background-color','#1af0b8');
 		            $('.backShadow').css('background-color','#08b7b2');
-		        }else if(index == 5){
+		        }else if(index == 6){
 		            $('body').css('background-color','#dedede');
 		            $('.backShadow').css('background-color','#333333');
-		        }else if(index == 6){
+		        }else if(index == 7){
 		            $('body').css('background-color','#3d3d50');
 		            $('.backShadow').css('background-color','#dd0917');
-		        }else if(index == 7){
+		        }else if(index == 8){
 		            $('body').css('background-color','#2c2c34');
 		        }
 		        $('.leftInfo').hide().fadeIn();
@@ -66,7 +69,7 @@ function srollPage(){
 		    afterMove: function(index) {
 		        $('.leftInfo').fadeIn();
 		    },  
-		    loop: false,                     
+		    loop: true,                     
 		    keyboard: true,                  
 		    responsiveFallback: false,                          
 		    direction: "vertical"            
@@ -78,8 +81,8 @@ function srollPage(){
 	        $(this).parents('section').addClass('expand');//expand the shadow
 	        $('.backBtn').removeClass('fadeOut').show();//show the back button
 	        $(".onepage-pagination").hide();//hide the pagination dots
+	        $(".main").disable();//disable onepage scroll
 	        $('.backShadow').one('webkitTransitionEnd mozTransitionEnd MSTransitionEnd oTransitionend', function(){
-	            $(".main").disable();//disable onepage scroll
 	            $(this).parents('.expand').addClass('in');//after expading, show the content
 	            
 	      });
@@ -90,8 +93,8 @@ function srollPage(){
 	        $('section').removeClass('expand');//set the shadow to width 50%
 	        $('.backBtn').addClass('fadeOut');//hide the back button
 	        $(".onepage-pagination").fadeIn();//show the pagination dots
+	        $(".main").enable();//enable the onepage scroll
 	        $('.backShadow').one('webkitTransitionEnd mozTransitionEnd MSTransitionEnd oTransitionend transitionend', function(){ 
-	            $(".main").enable();//enable the onepage scroll
 	            $(this).parents('section').removeClass('in');//hide the content
 	      	});
 	    });
@@ -134,12 +137,12 @@ function srollPageDisabled(){
 		$('#goPage').on('click',function(){
 			window.location.assign("http://jimfu.github.io/go_page.html");
 		});
-		$('#resumePage').on('click',function(){
-			window.location.assign("http://jimfu.github.io/resume_page.html");
-		});
-		$('#tkdPage').on('click',function(){
-			window.location.assign("http://jimfu.github.io/tkd_page.html");
-		});
+		// $('#resumePage').on('click',function(){
+		// 	window.location.assign("http://jimfu.github.io/resume_page.html");
+		// });
+		// $('#tkdPage').on('click',function(){
+		// 	window.location.assign("http://jimfu.github.io/tkd_page.html");
+		// });
 		$('.backToTop').hide();
 	});
 }
