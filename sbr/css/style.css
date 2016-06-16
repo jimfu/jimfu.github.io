@@ -8,41 +8,28 @@ body {
 /*	height: 100%;
     overflow-y: scroll;
     overflow-x: hidden;*/
+    overflow-x: hidden;
+}
+.clear{
+	clear: both;
 }
 .slogan{
 	width: 100%;
 	height: calc(100vh - 165px );
-	background-color: rgba(0,0,0,.2);
 	position: relative;
     background-position: 0 0;
+    background-image: url(../img/beach_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 .slogan:before{
-	/*content:'';
-	background-image: url(../img/beach_background.jpg);
-	background-position: 50% 50%; 
-	background-size: cover;
-	background-attachment: fixed;
-	-webkit-overflow-scrolling: touch;
+	content:'';
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	z-index: -1;*/
+	background-color: rgba(0,0,0,.2); 
 }
-#hero-movie{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: 100vh;
-    z-index: -100;
-    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
-    transform: translateX(-50%) translateY(-50%) translateZ(0);
-    transition: -webkit-filter .5s;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 .middle{
 	padding:25vh 10vw;
 	height: 50vh;
@@ -87,7 +74,7 @@ body {
 	float: left;
 	border-left: 1px solid #ddd;
 	margin: 50px 0;
-	padding:10px 50px;
+	padding:10px 30px;
 	height: 45px;
 	color:#aaa;
 	font-size:14px;
@@ -156,11 +143,40 @@ section{
 }
 
 .intro h1{
-	padding:70px 0 40px 0;
+	padding:70px 15px 30px 15px;
 	border-bottom:1px solid #ddd;
 	max-width: 400px;
 	margin:0 auto;
 	font-size: 36px;
+	position: relative;
+}
+.intro h1:before{
+	content:'';
+	width: 10px;
+	height: 10px;
+	background-color: #80b92e;
+	border-radius: 100px;
+	display: inline-block;
+    margin: 10px 20px 10px 0;
+	
+}
+.intro h1:after{
+	content:'';
+	width: 10px;
+	height: 10px;
+	background-color: #80b92e;
+	border-radius: 100px;
+	display: inline-block;
+    margin: 10px 0 10px 20px;
+}
+
+section:nth-child(4) .intro h1:before,
+section:nth-child(4) .intro h1:after{
+	background-color: #38609e;
+}
+section:nth-child(6) .intro h1:before,
+section:nth-child(6) .intro h1:after{
+	background-color: #eaa91b;
 }
 .intro p{
 	margin:0 auto;
@@ -178,27 +194,21 @@ section{
   position: relative;
 
 }
-.dissert{
-	background-position: 50% 50%; 
+.introBackground{
+	background-position:0 0;
 	background-size: cover;
-    background-image: url(../img/dissert_background.jpg);
+	height: 600px;
     background-attachment: fixed;
-    height: 600px
+}
+.dissert{
+    background-image: url(../img/dissert_background.jpg);
 }
 
 .wedding{
-	background-position: 50% 50%; 
-	background-size: cover;
     background-image: url(../img/wedding_background.jpg);
-    background-attachment: fixed;
-    height: 600px
 }
 .rooms{
-	background-position: 50% 90%; 
-	background-size: cover;
     background-image: url(../img/room_background.jpg);
-    background-attachment: fixed;
-    height: 600px
 }
 .leftHalf{
 	display: inline-block;
@@ -211,8 +221,28 @@ section{
 	width: 100%;
 	padding-top: 40px;
 }
-.rightHalf p{
+.loveText{
 	padding:100px;
+
+}
+.rightHalf p{
+	position: relative;
+}
+.rightHalf p:before{
+	content:"\f004";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    left: -30px;
+    top: -20px;
+    color:#f95959;
+}
+.rightHalf p:after{
+	content:"\f004";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    color:#f95959;
 }
 .rightHalf{
 	width: calc( 50vw - 40px );
@@ -316,4 +346,124 @@ section{
     opacity: 1;
 
   }
+}
+@media screen and (max-width: 1440px) {
+	.slogan h1{
+		font-size: 50px;
+	}
+	.slogan i{
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 1.5px;
+	}
+	.btnGroup{
+		margin: 55px 30px;
+	}
+	.btnGroup .bookingNow{
+		padding: 0 25px;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.slogan h1{
+		/*font-size: 3vw;*/
+	}
+	.contactInfo{
+		display: none;
+	}
+	.middle{
+		max-width: 90%;
+	}
+	.loveText{
+		padding: 50px;
+	}
+	
+}
+
+@media screen and (max-width: 590px) {
+	.slogan h1{
+		font-size: 32px;
+	}
+	.contactInfo{
+		display: none;
+	}
+	.middle{
+		max-width: 90%;
+	}
+	.leftHalf,.rightHalf{
+		width: 100%;
+	}
+	.header{
+		text-align: center;
+		/*padding: 30px;*/
+	    height: 100px;
+        /*padding: 0 15px;*/
+	}
+	.logo {
+	    padding: 15px 0 15px 15px;
+	    
+	}
+	.btnGroup{
+		margin:0;
+		text-align:center; 
+	    padding: 0;
+	    width: 100%;
+	    /*width: 290px;*/
+
+	}
+	.btnGroup .bookingNow{
+		margin:0;
+		width: 100%;
+		border-radius: 0;
+		padding: 17px 25px;
+    	height: auto;
+	}
+	.middle{
+		padding:10vh 10vw;
+	}
+	.slogan i {
+        font-size: 2.5vh;
+	    line-height: 4vh;
+	    letter-spacing: 1.5px;
+	}
+	.btnGroup button {
+	    background: 0;
+	    border: none;
+	    height: 40px;
+	    margin-left: 10px;
+	    text-align: center;
+	    position: relative;
+	}
+	.btnGroup .simpChinese,.btnGroup .tradChinese{
+		position: absolute;
+	    right: 0;
+	    top: 12px;
+	}
+	.simpChinese:before, .tradChinese:before{
+		width: 40px;
+		height: 40px;
+		left: 4px;
+	}
+	.intro h1{
+		font-size: 8vw;
+	}
+	.intro h1:before,.intro h1:after{
+		display: none;
+	}
+	.introBackground{
+		height: 300px;
+	}
+	.logo{
+		height: 35px;
+	}
+	.leftHalf img{
+		padding-top: 1px;
+	}
+	.slogan{
+	    height: calc(100vh - 120px );
+	    background-attachment: initial;
+	    background-position: 50% 0;
+	}
+
 }
