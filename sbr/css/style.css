@@ -1,0 +1,319 @@
+
+html,body{
+/*	overflow: hidden;
+  	height: 100%;*/
+}
+body {
+  	font-family:"Helvetica Neue", Helvetica,\5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+/*	height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;*/
+}
+.slogan{
+	width: 100%;
+	height: calc(100vh - 165px );
+	background-color: rgba(0,0,0,.2);
+	position: relative;
+    background-position: 0 0;
+}
+.slogan:before{
+	/*content:'';
+	background-image: url(../img/beach_background.jpg);
+	background-position: 50% 50%; 
+	background-size: cover;
+	background-attachment: fixed;
+	-webkit-overflow-scrolling: touch;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;*/
+}
+#hero-movie{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: 100vh;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transform: translateX(-50%) translateY(-50%) translateZ(0);
+    transition: -webkit-filter .5s;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.middle{
+	padding:25vh 10vw;
+	height: 50vh;
+	max-width: 50%;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.slogan h1{
+	font-weight: normal;
+	color:white;
+	font-size: 72px;
+	z-index: 2;
+}
+.slogan i{
+	color:white;
+	font-size: 18px;
+	line-height: 36px;
+	letter-spacing: 1.5px;
+}
+.container{
+    position: relative;
+/*	margin-top: -165px;
+	top: 100%;*/
+	background-color: white;
+
+}
+
+.header{
+	height: 165px;
+}
+
+.logo{
+	height: 45px;
+	padding:60px 30px;
+	float: left;
+}
+.fa{
+	text-align: center;
+	width: 1em;
+}
+.contactInfo{
+	display: inline-block;
+	float: left;
+	border-left: 1px solid #ddd;
+	margin: 50px 0;
+	padding:10px 50px;
+	height: 45px;
+	color:#aaa;
+	font-size:14px;
+    letter-spacing: 0.5;
+    line-height: 1.7;
+}
+.mapBtn{
+	margin-left:10px;
+}
+.btnGroup{
+	float:right;
+	margin: 55px 70px;
+}
+.btnGroup button{
+	background: 0;
+    border: none;
+    height: 50px;
+    position: relative;
+    margin-left: 15px;
+    text-align: center;
+
+}
+.btnGroup .active{
+	color:white;
+}
+
+.simpChinese:before, .tradChinese:before{
+	content:'';
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color:white;
+	border-radius: 100px;
+	z-index: -1;
+    box-shadow: 0 0 0 1px #ccc;
+}
+.btnGroup .active:before{
+	background-color: black;
+}
+.simpChinese, .tradChinese{
+	width: 50px;
+	z-index: 1;
+	font-size: 14px;
+	color:#aaa;
+}
+
+.btnGroup .bookingNow{
+    font-size: 16px;
+    background-color: #1AEC1A;
+    padding: 0 50px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+}
+section{
+	text-align: center;
+	margin:0 auto;
+
+}
+
+.intro{
+	padding-bottom: 50px;
+}
+
+.intro h1{
+	padding:70px 0 40px 0;
+	border-bottom:1px solid #ddd;
+	max-width: 400px;
+	margin:0 auto;
+	font-size: 36px;
+}
+.intro p{
+	margin:0 auto;
+	max-width: 1000px;
+	padding:40px;
+	font-size: 18px;
+	line-height: 27px;
+	color:#333;
+}
+.test{
+	perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+
+}
+.dissert{
+	background-position: 50% 50%; 
+	background-size: cover;
+    background-image: url(../img/dissert_background.jpg);
+    background-attachment: fixed;
+    height: 600px
+}
+
+.wedding{
+	background-position: 50% 50%; 
+	background-size: cover;
+    background-image: url(../img/wedding_background.jpg);
+    background-attachment: fixed;
+    height: 600px
+}
+.rooms{
+	background-position: 50% 90%; 
+	background-size: cover;
+    background-image: url(../img/room_background.jpg);
+    background-attachment: fixed;
+    height: 600px
+}
+.leftHalf{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	position: relative;
+	min-height: 50%;
+}
+.leftHalf img{
+	width: 100%;
+	padding-top: 40px;
+}
+.rightHalf p{
+	padding:100px;
+}
+.rightHalf{
+	width: calc( 50vw - 40px );
+    display: inline-block;
+	float: right;
+	position: relative;
+	min-height: 50%;
+}
+.rightHalf img{
+	width: 100%;
+	padding-top: 40px;
+}
+/*.para{
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.leftHalf,.rightHalf{
+ 	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.leftHalf{
+	transform: translateZ(0);
+}
+.rightHalf{
+	transform: translateZ(-1px);
+}*/
+.hideme{
+	opacity: 0;
+	-webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.easyme{
+	opacity: 0;
+	-webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.fadeInUp{
+	            -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+.fadeIn{
+		            -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+   
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
