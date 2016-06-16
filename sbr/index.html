@@ -110,7 +110,7 @@
 			</div>
 		</section>
 
-		<section class="">
+		<section class="formZone">
 		<hr>
 			<div class="intro hideme">
 				<h1>高級度假會館</h1>
@@ -135,7 +135,7 @@
 
 function parallaxEffect() {
 	var parallax = document.querySelectorAll(".parallax"),
-      speed = 0;
+      speed = 0.5;
 
 	window.onscroll = function(){
 		[].slice.call(parallax).forEach(function(el,i){
@@ -154,6 +154,7 @@ function determinMobile(){
 		console.log('ios');
 		$('.slogan').addClass('parallax');
 		$('.introBackground').addClass('parallax');
+		$('.intro p').css('background','red');
 		parallaxEffect();
 
 	} else if (/(Android)/i.test(navigator.userAgent)) { 

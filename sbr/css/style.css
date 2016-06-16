@@ -255,6 +255,12 @@ section:nth-child(6) .intro h1:after{
 	width: 100%;
 	padding-top: 40px;
 }
+.formZone{
+	padding:130px 100px 0 100px;
+}
+/*.parallax{
+	background-attachment: initial;
+}*/
 /*.para{
 	perspective: 1px;
 	height: 100vh;
