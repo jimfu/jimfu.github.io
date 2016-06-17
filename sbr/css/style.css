@@ -288,7 +288,7 @@ section:nth-child(6) .intro h1:after{
           animation-fill-mode: both;
 }
 .easyme{
-	opacity: 0;
+	/*opacity: 0;*/
 	-webkit-animation-duration: .5s;
           animation-duration: .5s;
   -webkit-animation-fill-mode: both;
