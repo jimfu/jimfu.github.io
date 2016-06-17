@@ -154,8 +154,8 @@ function determinMobile(){
 		console.log('ios');
 		$('.slogan').addClass('parallax');
 		$('.introBackground').addClass('parallax');
-		$('.intro p').css('background','red');
-		parallaxEffect();
+		// $('.intro p').css('background','red');
+		parallaxEffect();s
 
 	} else if (/(Android)/i.test(navigator.userAgent)) { 
 		$('.slogan').addClass('parallax');
@@ -172,7 +172,7 @@ $(function(){
 	},{offset: '70%'});
 	// $('.easyme').waypoint(function() {
 	// 	$(this.element).addClass('fadeIn');
-	},{offset: '70%'});  
+	//},{offset: '70%'});  
 	$('.bookingNow').on('click',function(){
 			console.log('haha');
 			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
