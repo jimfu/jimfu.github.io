@@ -54,7 +54,7 @@
 					</p>
 					<i class=""></i>
 			</div>
-			<div class="introBackground dissert easyme">
+			<div class="introBackground dissert easyme" id="intro1">
 			</div>
 		</section>
 		<section class="">
@@ -76,7 +76,7 @@
 					在西子灣絕美的夕陽晚景與徐徐海風中，打造令妳難忘的幸福時刻 !
 				</p>
 			</div>
-			<div class="introBackground wedding easyme">
+			<div class="introBackground wedding easyme"  id="intro2">
 			</div>
 		</section>
 		<section class="para">
@@ -86,7 +86,7 @@
 			</div>
 			<div class="rightHalf">
 				<div class="loveText">
-					<p>让您一生中最重要的时刻，如同电影情結般浪漫動人，专业的异国风沙滩婚礼，西子湾沙滩会馆的经典浪漫婚礼。玻璃水晶教堂，海景典雅宴会厅、户外星空婚宴…最浪漫的异国风沙滩婚礼，满足您户外婚礼的渴望，在西子湾沙滩的绝美背景中与海风中，打造另您永生难忘的幸福时刻。</p>
+					<p>讓您一生中最重要的時刻，如同電影情結般浪漫動人，專業的異國風沙灘婚禮，西子灣沙灘會館的經典浪漫婚禮。玻璃水晶教堂，海景典雅宴會廳、戶外星空婚宴…最浪漫的異國風沙灘婚禮，滿足您戶外婚禮的渴望，在西子灣沙灘的絕美背景中與海風中，打造另您永生難忘的幸福時刻。</p>
 				</div>
 				<img src="img/photo-1453857122308-5e78881d7acc.jpg"> 
 			</div>
@@ -106,7 +106,7 @@
 					給你電影般的動人回憶。
 				</p>
 			</div>
-			<div class="introBackground rooms easyme">
+			<div class="introBackground rooms easyme" id="intro3">
 			</div>
 		</section>
 
@@ -133,38 +133,38 @@
 </body>
 <script>
 
-function parallaxEffect() {
-	var parallax = document.querySelectorAll(".parallax"),
-      speed = 0.5;
+// function parallaxEffect() {
+// 	var parallax = document.querySelectorAll(".parallax"),
+//       speed = 0.5;
 
-	window.onscroll = function(){
-		[].slice.call(parallax).forEach(function(el,i){
+// 	window.onscroll = function(){
+// 		[].slice.call(parallax).forEach(function(el,i){
 
-		  var windowYOffset = window.pageYOffset,
-		      elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
+// 		  var windowYOffset = window.pageYOffset,
+// 		      elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
-		  el.style.backgroundPosition = elBackgrounPos;
+// 		  el.style.backgroundPosition = elBackgrounPos;
 
-		});
-	};
-}
+// 		});
+// 	};
+// }
 
-function determinMobile(){
-	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { 
-		console.log('ios');
-		$('.slogan').addClass('parallax');
-		$('.introBackground').addClass('parallax');
-		// $('.intro p').css('background','red');
-		parallaxEffect();s
+// function determinMobile(){
+// 	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { 
+// 		console.log('ios');
+// 		$('.slogan').addClass('parallax');
+// 		$('.introBackground').addClass('parallax');
+// 		// $('.intro p').css('background','red');
+// 		parallaxEffect();
 
-	} else if (/(Android)/i.test(navigator.userAgent)) { 
-		$('.slogan').addClass('parallax');
-		$('.introBackground').addClass('parallax');
-		console.log('android');
-		parallaxEffect();
-		} else { console.log('pc');
-	}; 
-}
+// 	} else if (/(Android)/i.test(navigator.userAgent)) { 
+// 		$('.slogan').addClass('parallax');
+// 		$('.introBackground').addClass('parallax');
+// 		console.log('android');
+// 		parallaxEffect();
+// 		} else { console.log('pc');
+// 	}; 
+// }
 
 $(function(){
 	$('.hideme').waypoint(function() {
@@ -177,9 +177,24 @@ $(function(){
 			console.log('haha');
 			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	});
-
+	var calNumber = $('#intro1').position();
+	var calNumber2 = $('#intro2').position();
+	var calNumber3 = $('#intro3').position();
+	console.log(calNumber.top);
+	console.log(calNumber2.top);
+	console.log(calNumber3.top);
 	
-	determinMobile();
+	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+		var speed = 0.7;
+
+		$('.introBackground').css('background-size', 'auto 100%');
+		$(document).scroll(function() {
+			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
+	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber) + 'px');
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3) + 'px');
+	    });
+	}
 	
 	
 });
