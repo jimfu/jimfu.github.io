@@ -228,27 +228,65 @@ $(function(){
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
 	// 	var speed =0.7;
 		$('body').addClass('mobileVersion');
-		$('.header').waypoint(function() {
-			$('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
-			$('.slogan .middle').css('display','block');
-			console.log('header');
-		},{offset: '-100'});
-		$('#intro1').waypoint(function() {
-			$('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');
-			$('.slogan:before').hide();
-			$('.slogan .middle').css('display','none');
+		$('.header').waypoint(function(direction) {
+			// $('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
+			// $('.slogan .middle').css('display','block');
+			// console.log('header');
+
+
+			if (direction === 'up') {
+			    $('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
+				$('.slogan .middle').css('display','block');
+			  }
+			  else {
+			 //    $('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
+				// $('.slogan .middle').css('display','block');
+			  }
+		},{offset: '0'});
+		$('#intro1').waypoint(function(direction) {
+			// $('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');
+			// $('.slogan:before').hide();
+			// $('.slogan .middle').css('display','none');
 			console.log('intro1');
-		},{offset: '110%'});
-		$('#intro2').waypoint(function() {
-			$('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
-			$('.slogan .middle').css('display','none');
-			console.log('intro1');
-		},{offset: '110%'});
-		$('#intro3').waypoint(function() {
-			$('.slogan').css('background-image','url("img/room_background.jpg")').addClass('removeSHadow');;
-			$('.slogan .middle').css('display','none');
-			console.log('intro1');
-		},{offset: '110%'});
+
+			 if (direction === 'down') {
+			    $('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');
+				$('.slogan:before').hide();
+				$('.slogan .middle').css('display','none');
+			  }
+			  else {
+			    $('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
+				$('.slogan .middle').css('display','block');
+			  }
+		},{offset: '130%'});
+		$('#intro2').waypoint(function(direction) {
+			// $('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
+			// $('.slogan .middle').css('display','none');
+
+
+			if (direction === 'down') {
+			    $('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
+				$('.slogan .middle').css('display','none');
+			  }
+			  else {
+			    $('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');;
+				$('.slogan .middle').css('display','none');
+			  }
+		},{offset: '130%'});
+		$('#intro3').waypoint(function(direction) {
+			// $('.slogan').css('background-image','url("img/room_background.jpg")').addClass('removeSHadow');;
+			// $('.slogan .middle').css('display','none');
+			// console.log('intro1');
+
+			if (direction === 'down') {
+			    $('.slogan').css('background-image','url("img/room_background.jpg")').addClass('removeSHadow');;
+				$('.slogan .middle').css('display','none');
+			  }
+			  else {
+			    $('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
+				$('.slogan .middle').css('display','none');
+			  }
+		},{offset: '130%'});
 		// $('#intro1').waypoint(function() {
 		// 	$('.slogan').css('background-image','url("img/beach_background.jpg")').addClass('removeSHadow');
 		// 	$('.slogan:before').hide();
@@ -265,11 +303,11 @@ $(function(){
 		// 	$('.slogan .middle').css('display','none');
 		// 	console.log('intro1');
 		// },{offset: '50%'});
-	$(document).scroll(function() {
-			var scrollNumber= $(document).scrollTop();
-			console.log(scrollNumber);
+	// $(document).scroll(function() {
+	// 		var scrollNumber= $(document).scrollTop();
+	// 		console.log(scrollNumber);
 			
-	    });
+	//     });
 	}
 	// 	$('.introBackground').css({'background-size':'100% auto','background-attachment':'scroll'});
 	// 	$(document).scroll(function() {
