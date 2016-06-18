@@ -114,10 +114,11 @@ body {
     position: relative;
     margin-left: 15px;
     text-align: center;
-
+    transition: all .3s;
 }
 .btnGroup .active{
 	color:white;
+
 }
 
 .simpChinese:before, .tradChinese:before{
@@ -131,15 +132,18 @@ body {
 	border-radius: 100px;
 	z-index: -1;
     box-shadow: 0 0 0 1px #ccc;
+    transition: all .3s;
 }
 .btnGroup .active:before{
 	background-color: black;
+	transition: all .3s;
 }
 .simpChinese, .tradChinese{
 	width: 50px;
 	z-index: 1;
 	font-size: 14px;
 	color:#aaa;
+	transition: all .3s;
 }
 
 .btnGroup .bookingNow{
@@ -150,6 +154,7 @@ body {
     font-weight: bold;
     color: white;
     margin-right: 20px;
+    transition: all .5s;
 }
 section{
 	text-align: center;
@@ -258,6 +263,11 @@ section:nth-child(6) .intro h1:after{
     left: -30px;
     top: -20px;
     color:#f95959;
+    -webkit-animation: beats 1s ease-in infinite alternate;
+    -moz-animation: beats 1s ease-in infinite alternate;
+    -o-animation: beats 1s ease-in infinite alternate;
+    -ms-animation: beats 1s ease-in infinite alternate;
+    animation: beats 1s ease-in infinite alternate;
 }
 .rightHalf p:after{
 	content:"\f004";
@@ -266,6 +276,11 @@ section:nth-child(6) .intro h1:after{
     right: -30px;
     bottom: -20px;
     color:#f95959;
+    -webkit-animation: beats .5s ease-in infinite alternate;
+    -moz-animation: beats .5s ease-in infinite alternate;
+    -o-animation: beats .5s ease-in infinite alternate;
+    -ms-animation: beats .5s ease-in infinite alternate;
+    animation: beats .5s ease-in infinite alternate;
 }
 .rightHalf{
 	width: calc( 50vw - 40px );
@@ -372,6 +387,25 @@ section:nth-child(6) .intro h1:after{
 	border-bottom:1px solid #333;
 	border-radius:0;
 }
+.paper_content input:hover,
+.paper_content textarea:hover{
+	background-color: rgba(255, 255, 255, 0.5);
+	transition: all .3s;
+}
+.paper_content input:focus,
+.paper_content textarea:focus{
+	background-color: rgba(255, 255, 255, 1);
+	transition: all .3s;
+}
+.paper_content input.error,
+.paper_content textarea.error{
+	border-color: red;
+}
+.errorMessage{
+	margin-top: 15px;
+	color:red;
+	text-align: right;
+}
 .paper_content .half{
 	width: 50%;
 	display: inline-block;
@@ -404,7 +438,45 @@ section:nth-child(6) .intro h1:after{
     background-color: #80b92e;
     padding:15px;
     color:white;
-    box-shadow: 0 15px 25px  rgba(128, 185, 46, 0.47);
+    box-shadow: 0 15px 15px  rgba(128, 185, 46, 0.47);
+    transition: all .3s;
+}
+.paper_content button:hover{
+	background-color: #8dd22b;
+	transform: translateY(-5px);
+	transition: all .3s;
+	box-shadow: 0 20px 25px  rgba(128, 185, 46, 0.47);
+}
+.paper_content button:active{
+	background-color: #80b92e;
+	box-shadow: 0 15px 15px  rgba(128, 185, 46, 0.47);
+	transform: translateY(0);
+}
+.simpChinese:hover, .tradChinese:hover{
+	color:white;
+	transition: all .3s;
+}
+.simpChinese:hover:before, .tradChinese:hover:before{
+	background-color: #ccc;
+}
+button.active:hover:before{
+	background-color:  black;
+}
+.btnGroup .bookingNow:hover{
+	transition: all .3s;
+	background-color: #2eb72e;
+}
+.mapBtn{
+	background-color:white;
+    background-color: white;
+    border: 1px solid #aaa;
+    padding: 2px 10px;
+    border-radius: 20px;
+    color:#aaa;
+    text-decoration: none;
+}
+.mapBtn:hover{
+	color:#333;
 }
 .mobileVersion .container{
 	/*padding-top:calc(100vh - 165px );*/
@@ -475,6 +547,9 @@ section:nth-child(6) .intro h1:after{
 		            -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
 }
+button,textarea,input,a{
+	outline: 0;
+}
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -500,6 +575,30 @@ section:nth-child(6) .intro h1:after{
     opacity: 1;
     -webkit-transform: none;
             transform: none;
+  }
+}
+
+@-webkit-keyframes beats {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 60px, 0);
+            transform: translate3d(0, 60px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes beats {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.3);
   }
 }
 
@@ -556,7 +655,7 @@ section:nth-child(6) .intro h1:after{
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 	.slogan h1{
 		/*font-size: 3vw;*/
 	}
@@ -570,7 +669,8 @@ section:nth-child(6) .intro h1:after{
 		padding: 50px;
 	}
 	.allService .contactInfo{
-		margin-top: 0;
+		/*margin-top: 0;*/
+		padding-left: 15px;
 	}
 	.allService,.paper{
 		width: 100%;
@@ -579,7 +679,7 @@ section:nth-child(6) .intro h1:after{
 		padding:0;
 	}
 	.logo{
-		padding-right: 0;
+		padding-right: 15px;
 	}
 	.btnGroup{
 		margin-left: 0;
@@ -591,9 +691,7 @@ section:nth-child(6) .intro h1:after{
 	.slogan h1{
 		font-size: 32px;
 	}
-	.contactInfo{
-		display: none;
-	}
+	
 	.middle{
 		max-width: 90%;
 	}
@@ -669,6 +767,9 @@ section:nth-child(6) .intro h1:after{
 	.leftHalf img{
 		padding-top: 1px;
 	}
+	.allService .contactInfo{
+		margin-top:0; 
+	}
 	.mobileVersion .container{
 		/*padding-top: calc(100vh - 120px );*/
 	}
@@ -707,5 +808,21 @@ section:nth-child(6) .intro h1:after{
 	}
 	.allService p{
 		padding-right: 0;
+	}
+	.intro h1{
+	    max-width: 80%;
+	    font-weight: normal;
+	}
+	section .intro h1{
+    	color: #80b92e;
+    	border-color:#80b92e;
+	}
+	section:nth-child(5) .intro h1{
+    	color: #38609e;
+    	border-color:#38609e;
+	}
+	section:nth-child(6) .intro h1{
+    	color: #eaa91b;
+    	border-color:#eaa91b;
 	}
 }

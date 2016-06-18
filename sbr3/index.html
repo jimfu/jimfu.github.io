@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
 <body class=>
@@ -30,7 +31,7 @@
 				<div>
 					<i class="fa fa-map-marker"></i> 
 					<i>高雄市鼓山區蓮海路 51號</i>
-					<button class="mapBtn">map</button>
+					<a class="mapBtn" target="_blank" href="https://www.google.com.tw/maps/place/%E8%A5%BF%E5%AD%90%E7%81%A3%E6%B2%99%E7%81%98%E6%9C%83%E9%A4%A8/@22.624696,120.2625273,17z/data=!3m1!4b1!4m5!3m4!1s0x346e0408391921ab:0xa2079f8580985bf2!8m2!3d22.624696!4d120.264716">map</a>
 				</div>
 				<div>
 					<i class="fa fa-phone"></i> 
@@ -117,7 +118,7 @@
 			<div class="allService">
 				<h1>線上預約</h1>
 				<p>西子灣沙灘會館有著高雄最美麗的沙灘與美食，讓你有個美好的度假。<br>
-					我們提供以下服務，可打電話聯絡我們，或填妥右邊表單，我們會盡快跟你聯繫。
+					我們提供以下服務，可打電話聯絡我們，或填妥表單，我們會盡快跟你聯繫。
 				</p>
 				<ul>
 					<li><i>高雄西子灣沙灘婚禮</i></li>
@@ -131,7 +132,7 @@
 						<div>
 							<i class="fa fa-map-marker"></i> 
 							<i>高雄市鼓山區蓮海路 51號</i>
-							<button class="mapBtn">map</button>
+							<a class="mapBtn" target="_blank" href="https://www.google.com.tw/maps/place/%E8%A5%BF%E5%AD%90%E7%81%A3%E6%B2%99%E7%81%98%E6%9C%83%E9%A4%A8/@22.624696,120.2625273,17z/data=!3m1!4b1!4m5!3m4!1s0x346e0408391921ab:0xa2079f8580985bf2!8m2!3d22.624696!4d120.264716">map</a>
 						</div>
 						<div>
 							<i class="fa fa-phone"></i> 
@@ -144,7 +145,7 @@
 			</div>
 			<div class="paper">
 				<div class="paper_content">
-					<input type="text" placeholder="您的大名">
+					<input type="text" placeholder="您的大名" class="error">
 					<input type="text" placeholder="您的電話">
 					<div class="half">
 						<input type="email" placeholder="您的信箱">
@@ -156,10 +157,12 @@
 					<textarea placeholder="告訴我們您的需求"></textarea>
 					<div>
 						<div class="certifyCode">
+							<div class="g-recaptcha" data-sitekey=""></div>
 						</div>
 						<button>送出表單</button>
 					</div>
 					<div class="clear"></div>
+					<div class="errorMessage">有欄位未填寫</div>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -222,6 +225,15 @@ $(function(){
 	$('.bookingNow').on('click',function(){
 			console.log('p'+($(document).height()-100));
 			$("html, body").animate({ scrollTop: $(document).height()  }, 1000);
+	});
+
+	$('.simpChinese').on('click',function(){
+		$(this).addClass('active');
+		$('.tradChinese').removeClass('active');
+	});
+	$('.tradChinese').on('click',function(){
+		$(this).addClass('active');
+		$('.simpChinese').removeClass('active');
 	});
 	var calNumber = $('#intro1').position();
 	var calNumber2 = $('#intro2').position();
