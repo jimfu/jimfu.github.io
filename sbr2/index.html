@@ -229,29 +229,26 @@ $(function(){
 	// 	var speed =0.7;
 		$('body').addClass('mobileVersion');
 		$('.header').waypoint(function() {
-			$('.slogan').css('background-image','url("img/beach_background.jpg")');
+			$('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
 			$('.slogan .middle').css('display','block');
 			console.log('header');
 		},{offset: '-100'});
 		$('#intro1').waypoint(function() {
-			$('.slogan').css('background-image','url("img/wedding_background.jpg")');
-			// $('#intro1').css('background','none');
-			$('.slogan:before').css('display','none');
+			$('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');
+			$('.slogan:before').hide();
 			$('.slogan .middle').css('display','none');
 			console.log('intro1');
-		},{offset: '0%'});
+		},{offset: '70%'});
 		$('#intro2').waypoint(function() {
-			$('.slogan').css('background-image','url("img/dissert_background.jpg")');
-			$('.slogan:before').css('display','none');
+			$('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
 			$('.slogan .middle').css('display','none');
 			console.log('intro1');
-		},{offset: '30%'});
+		},{offset: '70%'});
 		$('#intro3').waypoint(function() {
-			$('.slogan').css('background-image','url("img/room_background.jpg")');
-			$('.slogan:before').css('display','none');
+			$('.slogan').css('background-image','url("img/room_background.jpg")').addClass('removeSHadow');;
 			$('.slogan .middle').css('display','none');
 			console.log('intro1');
-		},{offset: '30%'});
+		},{offset: '70%'});
 	$(document).scroll(function() {
 			var scrollNumber= $(document).scrollTop();
 			console.log(scrollNumber);

@@ -215,10 +215,10 @@ section:nth-child(6) .intro h1:after{
 
 }
 .introBackground{
-/*	background-position:0 0;
+	background-position:0 0;
 	background-size: cover;
 	height: 600px;
-    background-attachment: fixed;*/
+    background-attachment: fixed;
 }
 .dissert{
     background-image: url(../img/dissert_background.jpg);
@@ -420,8 +420,15 @@ section:nth-child(6) .intro h1:after{
 .mobileVersion .introBackground{
 /*	background:white;*/
 	/*opacity: 0;*/
+	/*background-position:0 0;*/
+	background-size: inherit;
+	height: 600px;
+    background-attachment: initial;
+    background:none;
 }
-
+.slogan.removeShadow:before{
+	display: none;
+}
 .para{
 	background-color: white;
 }
@@ -668,7 +675,7 @@ section:nth-child(6) .intro h1:after{
 	    background-attachment: initial;
 	    background-position: 50% 0;
 	}
-	.dissert{
+/*	.dissert{
     	background-image: url(../img/dissert_background_m.jpg);
 	}
 
@@ -677,7 +684,7 @@ section:nth-child(6) .intro h1:after{
 	}
 	.rooms{
 	    background-image: url(../img/room_background_m.jpg);
-	}
+	}*/
 	.formZone{
 		padding:40px;
 	}
