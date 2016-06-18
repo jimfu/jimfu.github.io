@@ -191,13 +191,13 @@ $(function(){
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
 		var speed = 0.7;
 
-		$('.introBackground').css('background-size', 'auto ' + screen.height*1.2 +'px');
+		$('.introBackground').css('background-size', 'auto ' + screen.height +'px');
 		$(document).scroll(function() {
 			var scrollNumber= $(document).scrollTop() * speed;
 			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop()) + 'px');
-	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber.top) + 'px');
-	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2.top) + 'px');
-	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3.top) + 'px');
+	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() + calNumber.top ) + 'px');
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() + calNumber2.top ) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() + calNumber3.top ) + 'px');
 	    });
 	}
 	
