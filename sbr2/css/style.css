@@ -215,10 +215,10 @@ section:nth-child(6) .intro h1:after{
 
 }
 .introBackground{
-	background-position:0 0;
+/*	background-position:0 0;
 	background-size: cover;
 	height: 600px;
-    background-attachment: fixed;
+    background-attachment: fixed;*/
 }
 .dissert{
     background-image: url(../img/dissert_background.jpg);
