@@ -14,15 +14,15 @@ body {
 	clear: both;
 }
 .slogan{
-	/*width: 100%;
+	width: 100%;
 	height: calc(100vh - 165px );
 	position: relative;
     background-position: 0 0;
     background-image: url(../img/beach_background.jpg);
     background-size: cover;
-    background-attachment: fixed;*/
+    background-attachment: fixed;
 
-    position: fixed;
+/*    position: fixed;
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -36,7 +36,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    background-image: url(../img/beach_background.jpg);
+    background-image: url(../img/beach_background.jpg);*/
 }
 .slogan:before{
 	content:'';
@@ -66,7 +66,7 @@ body {
 }
 .container{
     position: relative;
-    padding-top:calc(100vh - 165px );
+   /* padding-top:calc(100vh - 165px );*/
 /*	margin-top: -165px;
 	top: 100%;*/
 	/*background-color: none;*/
@@ -407,7 +407,7 @@ section:nth-child(6) .intro h1:after{
     box-shadow: 0 15px 25px  rgba(128, 185, 46, 0.47);
 }
 .mobileVersion .container{
-	padding-top:calc(100vh - 165px );
+	/*padding-top:calc(100vh - 165px );*/
 	z-index: 1
 }
 .mobileVersion .slogan{
@@ -421,10 +421,9 @@ section:nth-child(6) .intro h1:after{
 /*	background:white;*/
 	/*opacity: 0;*/
 	/*background-position:0 0;*/
-	background-size: inherit;
+	background-size: cover;
 	height: 600px;
     background-attachment: initial;
-    background:none;
 }
 .slogan.removeShadow:before{
 	display: none;
@@ -479,8 +478,8 @@ section:nth-child(6) .intro h1:after{
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 40px, 0);
-            transform: translate3d(0, 40px, 0);
+    -webkit-transform: translate3d(0, 60px, 0);
+            transform: translate3d(0, 60px, 0);
   }
 
   100% {
@@ -493,8 +492,8 @@ section:nth-child(6) .intro h1:after{
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 40px, 0);
-            transform: translate3d(0, 40px, 0);
+    -webkit-transform: translate3d(0, 60px, 0);
+            transform: translate3d(0, 60px, 0);
   }
 
   100% {
@@ -629,6 +628,9 @@ section:nth-child(6) .intro h1:after{
 	.middle{
 		padding:10vh 10vw;
 	}
+	.slogan{
+	    height: calc(100vh - 120px );
+	}
 	.slogan i {
         font-size: 2.5vh;
 	    line-height: 4vh;
@@ -658,7 +660,7 @@ section:nth-child(6) .intro h1:after{
 	.intro h1:before,.intro h1:after{
 		display: none;
 	}
-	.introBackground{
+	.mobileVersion .introBackground{
 		height: 300px;
 	}
 	.logo{
@@ -668,7 +670,7 @@ section:nth-child(6) .intro h1:after{
 		padding-top: 1px;
 	}
 	.mobileVersion .container{
-		padding-top: calc(100vh - 120px );
+		/*padding-top: calc(100vh - 120px );*/
 	}
 	.slogan{
 	    

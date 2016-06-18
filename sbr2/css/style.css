@@ -557,7 +557,7 @@ section:nth-child(6) .intro h1:after{
 
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
 	.slogan h1{
 		/*font-size: 3vw;*/
 	}

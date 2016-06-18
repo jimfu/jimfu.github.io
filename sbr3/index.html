@@ -64,7 +64,7 @@
 					在西子灣絕美的夕陽晚景與徐徐海風中，打造令妳難忘的幸福時刻 !
 				</p>
 			</div>
-			<div class="introBackground wedding easyme"  id="intro1">
+			<div class="introBackground wedding"  id="intro1">
 			</div>
 		</section>
 		<section class="para">
@@ -91,7 +91,7 @@
 					</p>
 					<i class=""></i>
 			</div>
-			<div class="introBackground dissert easyme" id="intro2">
+			<div class="introBackground dissert" id="intro2">
 			</div>
 		</section>
 		<section class="">
@@ -108,7 +108,7 @@
 					給你電影般的動人回憶。
 				</p>
 			</div>
-			<div class="introBackground rooms easyme" id="intro3">
+			<div class="introBackground rooms" id="intro3">
 			</div>
 		</section>
 
@@ -205,6 +205,12 @@
 // }
 
 $(function(){
+	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
+	// 	var speed =0.7;
+		$('body').addClass('mobileVersion');
+		$('.introBackground').addClass('hideme');
+		
+	}
 	$('.hideme').waypoint(function() {
 		$(this.element).addClass('fadeInUp');
 		console.log('haha')
@@ -225,36 +231,7 @@ $(function(){
 	console.log(calNumber3.top);
 	console.log(screen.height);
 	
-	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-	// 	var speed =0.7;
-		$('body').addClass('mobileVersion');
-		$('.header').waypoint(function() {
-			$('.slogan').css('background-image','url("img/beach_background.jpg")').removeClass('removeSHadow');;
-			$('.slogan .middle').css('display','block');
-			console.log('header');
-		},{offset: '-100'});
-		$('#intro1').waypoint(function() {
-			$('.slogan').css('background-image','url("img/wedding_background.jpg")').addClass('removeSHadow');
-			$('.slogan:before').hide();
-			$('.slogan .middle').css('display','none');
-			console.log('intro1');
-		},{offset: '70%'});
-		$('#intro2').waypoint(function() {
-			$('.slogan').css('background-image','url("img/dissert_background.jpg")').addClass('removeSHadow');;
-			$('.slogan .middle').css('display','none');
-			console.log('intro1');
-		},{offset: '70%'});
-		$('#intro3').waypoint(function() {
-			$('.slogan').css('background-image','url("img/room_background.jpg")').addClass('removeSHadow');;
-			$('.slogan .middle').css('display','none');
-			console.log('intro1');
-		},{offset: '70%'});
-	$(document).scroll(function() {
-			var scrollNumber= $(document).scrollTop();
-			console.log(scrollNumber);
-			
-	    });
-	}
+	
 	// 	$('.introBackground').css({'background-size':'100% auto','background-attachment':'scroll'});
 	// 	$(document).scroll(function() {
 	// 		var scrollNumber= $(document).scrollTop() * speed;
