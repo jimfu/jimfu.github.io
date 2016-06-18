@@ -171,6 +171,7 @@
 $(function(){
 	$('.hideme').waypoint(function() {
 		$(this.element).addClass('fadeInUp');
+		console.log('haha')
 	},{offset: '70%'});
 
 	// $('.easyme').waypoint(function() {
@@ -180,24 +181,24 @@ $(function(){
 			console.log('haha');
 			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
 	});
-	var calNumber = $('#intro1').position();
-	var calNumber2 = $('#intro2').position();
-	var calNumber3 = $('#intro3').position();
+	var calNumber = $('#intro1 .back').position();
+	var calNumber2 = $('#intro2 .back').position();
+	var calNumber3 = $('#intro3 .back').position();
 	console.log(calNumber.top);
 	console.log(calNumber2.top);
 	console.log(calNumber3.top);
 	console.log(screen.height);
 	
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-		var speed = 0.7;
+		var speed =0.1;
 
-		$('.introBackground').css('background-size', 'auto ' + screen.height +'px');
+		$('.introBackground .back').css({'background-size':'100% auto','background-attachment':'scroll'});
 		$(document).scroll(function() {
 			var scrollNumber= $(document).scrollTop() * speed;
 			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop()) + 'px');
-	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() + calNumber.top ) + 'px');
-	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() + calNumber2.top ) + 'px');
-	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() + calNumber3.top ) + 'px');
+	        $('#intro1 .back').css('transform', 'translate3d(0,' + (calNumber.top + screen.height - $('#intro1 .back').scrollTop()*speed) + 'px'+',0)');
+	        $('#intro2 .back').css('transform', 'translate3d(0,' + (calNumber2.top + screen.height - $(document).scrollTop()*speed) + 'px'+',0)');
+	        $('#intro3 .back').css('transform', 'translate3d(0,' + (calNumber3.top + screen.height - $(document).scrollTop()*speed) + 'px'+',0)');
 	    });
 	}
 	
