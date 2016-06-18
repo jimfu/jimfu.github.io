@@ -1,0 +1,687 @@
+
+html,body{
+/*	overflow: hidden;
+  	height: 100%;*/
+}
+body {
+  	font-family:"Helvetica Neue", Helvetica,\5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+/*	height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;*/
+    overflow-x: hidden;
+}
+.clear{
+	clear: both;
+}
+.slogan{
+	width: 100%;
+	height: calc(100vh - 165px );
+/*	height: 100%;*/
+	position: relative;
+    background-position: 0 0;
+    background-image: url(../img/beach_background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.slogan:before{
+	content:'';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.2); 
+}
+
+.middle{
+	padding:25vh 10vw;
+	height: 50vh;
+	max-width: 50%;
+	-webkit-transform: translate3d(0, 0, 0);
+}
+.slogan h1{
+	font-weight: normal;
+	color:white;
+	font-size: 72px;
+	z-index: 2;
+}
+.slogan i{
+	color:white;
+	font-size: 18px;
+	line-height: 36px;
+	letter-spacing: 1.5px;
+}
+.container{
+    position: relative;
+ /*   padding-top:calc(100vh - 165px );*/
+/*	margin-top: -165px;
+	top: 100%;*/
+	/*background-color: none;*/
+/*	margin-top:calc(100% - 165px);*/
+
+}
+
+.header{
+	height: 165px;
+	background-color: white;
+}
+
+.logo{
+	height: 45px;
+	padding:60px 30px;
+	float: left;
+}
+.fa{
+	text-align: center;
+	width: 1em;
+}
+.contactInfo{
+	display: inline-block;
+	float: left;
+	border-left: 1px solid #ddd;
+	margin: 50px 0;
+	padding:10px 30px;
+	height: 45px;
+	color:#aaa;
+	font-size:14px;
+    letter-spacing: 0.5;
+    line-height: 1.7;
+}
+.mapBtn{
+	margin-left:10px;
+}
+.btnGroup{
+	float:right;
+	margin: 55px 70px;
+}
+.btnGroup button{
+	background: 0;
+    border: none;
+    height: 50px;
+    position: relative;
+    margin-left: 15px;
+    text-align: center;
+
+}
+.btnGroup .active{
+	color:white;
+}
+
+.simpChinese:before, .tradChinese:before{
+	content:'';
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top:0;
+	left: 0;
+	background-color:white;
+	border-radius: 100px;
+	z-index: -1;
+    box-shadow: 0 0 0 1px #ccc;
+}
+.btnGroup .active:before{
+	background-color: black;
+}
+.simpChinese, .tradChinese{
+	width: 50px;
+	z-index: 1;
+	font-size: 14px;
+	color:#aaa;
+}
+
+.btnGroup .bookingNow{
+    font-size: 16px;
+    background-color: #1AEC1A;
+    padding: 0 50px;
+    border-radius: 100px;
+    font-weight: bold;
+    color: white;
+    margin-right: 20px;
+}
+section{
+	text-align: center;
+	margin:0 auto;
+
+}
+
+.intro{
+	padding-bottom: 50px;
+	background-color: white;
+}
+
+.intro h1{
+	padding:70px 15px 30px 15px;
+	border-bottom:1px solid #ddd;
+	max-width: 400px;
+	margin:0 auto;
+	font-size: 36px;
+	position: relative;
+}
+.intro h1:before{
+	content:'';
+	width: 10px;
+	height: 10px;
+	background-color: #80b92e;
+	border-radius: 100px;
+	display: inline-block;
+    margin: 10px 20px 10px 0;
+	
+}
+.intro h1:after{
+	content:'';
+	width: 10px;
+	height: 10px;
+	background-color: #80b92e;
+	border-radius: 100px;
+	display: inline-block;
+    margin: 10px 0 10px 20px;
+}
+
+section:nth-child(5) .intro h1:before,
+section:nth-child(5) .intro h1:after{
+	background-color: #38609e;
+}
+section:nth-child(6) .intro h1:before,
+section:nth-child(6) .intro h1:after{
+	background-color: #eaa91b;
+}
+.intro p{
+	margin:0 auto;
+	max-width: 1000px;
+	padding:40px;
+	font-size: 18px;
+	line-height: 27px;
+	color:#898989;
+}
+.test{
+	perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+
+}
+.introBackground{
+	background-position:0 0;
+	background-size: cover;
+	height: 600px;
+    background-attachment: fixed;
+}
+.dissert{
+    background-image: url(../img/dissert_background.jpg);
+}
+
+.wedding{
+    background-image: url(../img/wedding_background.jpg);
+}
+.rooms{
+    background-image: url(../img/room_background.jpg);
+}
+.leftHalf{
+	display: inline-block;
+	float: left;
+	width: 50%;
+	position: relative;
+	min-height: 50%;
+}
+.leftHalf img{
+	width: 100%;
+	padding-top: 40px;
+}
+.loveText{
+	padding:100px;
+
+}
+.rightHalf p{
+	position: relative;
+	font-size: 18px;
+    line-height: 27px;
+    color:#898989;
+}
+.rightHalf p:before{
+	content:"\f004";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    left: -30px;
+    top: -20px;
+    color:#f95959;
+}
+.rightHalf p:after{
+	content:"\f004";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: -30px;
+    bottom: -20px;
+    color:#f95959;
+}
+.rightHalf{
+	width: calc( 50vw - 40px );
+    display: inline-block;
+	float: right;
+	position: relative;
+	min-height: 50%;
+}
+.rightHalf img{
+	width: 100%;
+	padding-top: 40px;
+}
+.formZone{
+	padding:130px 100px 0 100px;
+	text-align: left;
+	overflow-y: hidden;
+}
+.formZone h1{
+	text-align: left;
+}
+.allService{
+	width: 55%;
+	float:left;
+	display: inline-block;
+	padding:30px;
+    box-sizing: border-box;
+}
+.allService p{
+    font-size: 18px;
+    line-height: 27px;
+    color: #333;
+    padding-right: 50px;
+}
+.allService ul{
+	padding:0;
+	list-style-type: none;
+	font-size: 18px;
+}
+.allService li{
+	padding:18px 0;
+}
+.allService li:before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #80b92e;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 2px 20px 2px 10px;
+}
+.allService li:nth-child(2):before{
+	background-color: #38609e;
+}
+.allService li:nth-child(3):before{
+	background-color: #eaa91b;
+}
+.allService .logo{
+	padding-left: 0;
+	padding-bottom: 20px;
+}
+.allService .foot{
+	font-size: 12px;
+	padding-bottom: 50px;
+}
+.allService .contactInfo{
+	margin-bottom: 20px;
+}
+.paper{
+	width: 45%;
+	float:right;
+	display: inline-block;
+	padding: 50px 65px 0 0;
+    box-sizing: border-box;
+}
+.paper_content{
+	padding:50px;
+	background-color: #e8e8e8;
+	position:relative;
+	    z-index: 1;
+	
+}
+.paper_content:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+ /*   max-height: 100vh; */
+    bottom: -300px;
+    background-color: #e8e8e8;
+ z-index: -1;
+    box-shadow: 0 0 0 1px white,0 15px 13px rgba(0, 0, 0, 0.4);
+
+}
+.paper_content input{
+	width:100%;
+	font-style: italic;
+	margin-bottom: 20px;
+	padding:15px;
+	background: none;
+	border:none;
+	border-bottom:1px solid #333;
+	border-radius:0;
+}
+.paper_content .half{
+	width: 50%;
+	display: inline-block;
+	float:left;
+	box-sizing: border-box;
+}
+.paper_content .last{
+	padding-left: 15px;
+}
+.paper_content textarea{
+	background: none;
+	width: 100%;
+	max-width: 100%;
+	min-height: 200px;
+	padding:15px;
+	margin-top: 15px;
+	font-style: italic;
+	border-radius:0;
+}
+.paper_content .certifyCode{
+	width: 60%;
+	display: inline-block;
+	float: left;
+	padding:15px;
+}
+.paper_content button{
+	width: 40%;
+	float:right;
+	border:none;
+    background-color: #80b92e;
+    padding:15px;
+    color:white;
+    box-shadow: 0 15px 25px  rgba(128, 185, 46, 0.47);
+}
+.mobileVersion .container{
+	padding-top:calc(100vh - 165px );
+	z-index: 1
+}
+.mobileVersion .slogan{
+	position:fixed;
+	top:0;
+	left:0;
+	z-index: 0;
+	height: 100%;
+}
+.mobileVersion .introBackground{
+/*	background:white;*/
+	/*opacity: 0;*/
+}
+
+.para{
+	background-color: white;
+}
+/*.parallax{
+	background-attachment: initial;
+}*/
+/*.para{
+	perspective: 1px;
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.leftHalf,.rightHalf{
+ 	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.leftHalf{
+	transform: translateZ(0);
+}
+.rightHalf{
+	transform: translateZ(-1px);
+}*/
+.hideme{
+	opacity: 0;
+	-webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.easyme{
+	/*opacity: 0;*/
+	-webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.fadeInUp{
+	            -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+.fadeIn{
+		            -webkit-animation-name: fadeInUp;
+          animation-name: fadeInUp;
+}
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40px, 0);
+            transform: translate3d(0, 40px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+   
+  }
+
+  100% {
+    opacity: 1;
+
+  }
+}
+@media screen and (max-width: 1440px) {
+	.slogan h1{
+		font-size: 50px;
+	}
+	.slogan i{
+		font-size: 16px;
+		line-height: 30px;
+		letter-spacing: 1.5px;
+	}
+	.btnGroup{
+		margin: 55px 30px;
+	}
+	.btnGroup .bookingNow{
+		padding: 0 25px;
+	}
+	.allService .logo{
+		height: 40px;
+	}
+	.allService .contactInfo{
+		padding-right: 0;
+	}
+	.paper{
+		padding-right: 0
+	}
+	.allService{
+		padding:0;
+	}
+
+}
+
+@media screen and (max-width: 1000px) {
+	.slogan h1{
+		/*font-size: 3vw;*/
+	}
+	.header .contactInfo{
+		display: none;
+	}
+	.middle{
+		max-width: 90%;
+	}
+	.loveText{
+		padding: 50px;
+	}
+	.allService .contactInfo{
+		margin-top: 0;
+	}
+	.allService,.paper{
+		width: 100%;
+	}
+	.paper{
+		padding:0;
+	}
+	.logo{
+		padding-right: 0;
+	}
+	.btnGroup{
+		margin-left: 0;
+	}
+	
+}
+
+@media screen and (max-width: 590px) {
+	.slogan h1{
+		font-size: 32px;
+	}
+	.contactInfo{
+		display: none;
+	}
+	.middle{
+		max-width: 90%;
+	}
+	.leftHalf,.rightHalf{
+		width: 100%;
+	}
+	.header{
+		text-align: center;
+		/*padding: 30px;*/
+	    height: 100px;
+        /*padding: 0 15px;*/
+	}
+	.logo {
+	    padding: 15px 0 15px 15px;
+	    
+	}
+	.btnGroup{
+		margin:0;
+		text-align:center; 
+	    padding: 0;
+	    width: 100%;
+	    /*width: 290px;*/
+
+	}
+	.btnGroup .bookingNow{
+		margin:0;
+		width: 100%;
+		border-radius: 0;
+		padding: 17px 25px;
+    	height: auto;
+	}
+	.middle{
+		padding:10vh 10vw;
+	}
+	.slogan i {
+        font-size: 2.5vh;
+	    line-height: 4vh;
+	    letter-spacing: 1.5px;
+	}
+	.btnGroup button {
+	    background: 0;
+	    border: none;
+	    height: 40px;
+	    margin-left: 10px;
+	    text-align: center;
+	    position: relative;
+	}
+	.btnGroup .simpChinese,.btnGroup .tradChinese{
+		position: absolute;
+	    right: 0;
+	    top: 12px;
+	}
+	.simpChinese:before, .tradChinese:before{
+		width: 40px;
+		height: 40px;
+		left: 4px;
+	}
+	.intro h1{
+		font-size: 8vw;
+	}
+	.intro h1:before,.intro h1:after{
+		display: none;
+	}
+	.introBackground{
+		height: 300px;
+	}
+	.logo{
+		height: 35px;
+	}
+	.leftHalf img{
+		padding-top: 1px;
+	}
+	.mobileVersion .container{
+		padding-top: calc(100vh - 120px );
+	}
+	.slogan{
+	    
+	    background-attachment: initial;
+	    background-position: 50% 0;
+	}
+	.dissert{
+    	background-image: url(../img/dissert_background_m.jpg);
+	}
+
+	.wedding{
+	    background-image: url(../img/wedding_background_m.jpg);
+	}
+	.rooms{
+	    background-image: url(../img/room_background_m.jpg);
+	}
+	.formZone{
+		padding:40px;
+	}
+	.paper_content{
+		padding:20px;
+	}
+	.paper_content .half{
+		width: 100%;
+	}
+	.paper_content .last{
+		padding:0;
+	}
+	.paper_content .certifyCode{
+		width: 100%;
+	}
+	.paper_content button{
+		width: 100%;
+	}
+	.allService p{
+		padding-right: 0;
+	}
+}
