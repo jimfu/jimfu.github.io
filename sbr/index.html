@@ -44,19 +44,7 @@
 			</div>
 		</div>
 		<div class="clear"></div>
-		<section>
-			<div class="intro hideme">
-					<h1>沙灘會館海景下午茶</h1>
-					<p>面對西子灣遼闊海洋與潔白沙灘，您會想要在艷陽下戲水，或者舒舒服服的享受一頓英式下午茶?
-						<br><br>在這裡兩種選擇您可以一次擁有!
-						<br><br>西子灣沙灘會館海景餐廳的全景落地玻璃設計，坐擁絕佳海景視野，搭配經典英式下午茶以及精緻餐點，成為您來到高雄西子灣的另外一個放鬆選擇。
-						<br><br>為您與好姊妹安排一場悠閒的海洋午茶約會吧!
-					</p>
-					<i class=""></i>
-			</div>
-			<div class="introBackground dissert easyme" id="intro1">
-			</div>
-		</section>
+		
 		<section class="">
 			<div class="intro hideme">
 				<h1>高雄西子灣沙灘婚禮</h1>
@@ -80,17 +68,31 @@
 			</div>
 		</section>
 		<section class="para">
-			<div class="leftHalf">
-				<img src="img/photo-1459501462159-97d5bded1416.jpg">
-				<img src="img/photo-1463097769237-a14ad08ff22b.jpg"> 
-			</div>
 			<div class="rightHalf">
 				<div class="loveText">
 					<p>讓您一生中最重要的時刻，如同電影情結般浪漫動人，專業的異國風沙灘婚禮，西子灣沙灘會館的經典浪漫婚禮。玻璃水晶教堂，海景典雅宴會廳、戶外星空婚宴…最浪漫的異國風沙灘婚禮，滿足您戶外婚禮的渴望，在西子灣沙灘的絕美背景中與海風中，打造另您永生難忘的幸福時刻。</p>
 				</div>
 				<img src="img/photo-1453857122308-5e78881d7acc.jpg"> 
 			</div>
+			<div class="leftHalf">
+				<img src="img/photo-1459501462159-97d5bded1416.jpg">
+				<img src="img/photo-1463097769237-a14ad08ff22b.jpg"> 
+			</div>
+			
 			<div style="clear:both"></div>
+		</section>
+		<section>
+			<div class="intro hideme">
+					<h1>沙灘會館海景下午茶</h1>
+					<p>面對西子灣遼闊海洋與潔白沙灘，您會想要在艷陽下戲水，或者舒舒服服的享受一頓英式下午茶?
+						<br><br>在這裡兩種選擇您可以一次擁有!
+						<br><br>西子灣沙灘會館海景餐廳的全景落地玻璃設計，坐擁絕佳海景視野，搭配經典英式下午茶以及精緻餐點，成為您來到高雄西子灣的另外一個放鬆選擇。
+						<br><br>為您與好姊妹安排一場悠閒的海洋午茶約會吧!
+					</p>
+					<i class=""></i>
+			</div>
+			<div class="introBackground dissert easyme" id="intro1">
+			</div>
 		</section>
 		<section class="">
 			<div class="intro hideme">
@@ -187,12 +189,12 @@ $(function(){
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
 		var speed = 0.7;
 
-		$('.introBackground').css('background-size', 'auto 100%');
+		$('.introBackground').css('background-size', 'initail');
 		$(document).scroll(function() {
 			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber) + 'px');
-	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2) + 'px');
-	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3) + 'px');
+	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber) + 'px');
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber1) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber2) + 'px');
 	    });
 	}
 	

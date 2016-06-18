@@ -227,6 +227,8 @@ section:nth-child(6) .intro h1:after{
 }
 .rightHalf p{
 	position: relative;
+	font-size: 18px;
+    line-height: 27px;
 }
 .rightHalf p:before{
 	content:"\f004";
