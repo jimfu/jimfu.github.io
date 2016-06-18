@@ -349,6 +349,7 @@ section:nth-child(6) .intro h1:after{
 	background: none;
 	border:none;
 	border-bottom:1px solid #333;
+	border-radius:0;
 }
 .paper_content .half{
 	width: 50%;
@@ -367,6 +368,7 @@ section:nth-child(6) .intro h1:after{
 	padding:15px;
 	margin-top: 15px;
 	font-style: italic;
+	border-radius:0;
 }
 .paper_content .certifyCode{
 	width: 60%;
@@ -650,5 +652,8 @@ section:nth-child(6) .intro h1:after{
 	}
 	.paper_content button{
 		width: 100%;
+	}
+	.allService p{
+		padding-right: 0;
 	}
 }
