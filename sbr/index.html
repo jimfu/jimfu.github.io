@@ -185,20 +185,19 @@ $(function(){
 	var calNumber3 = $('#intro3').position();
 	console.log(calNumber.top);
 	console.log(calNumber2.top);
-	console.log(calNumber3.top + $(document).scrollTop());
+	console.log(calNumber3.top);
 	console.log(screen.height);
-	$('#intro1').css('background-position', '50% ' + ($(document).scrollTop() - calNumber.top + 120 ) + 'px');
 	
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-		var speed = 1;
+		var speed = 0.7;
 
 		$('.introBackground').css('background-size', 'auto ' + screen.height*1.2 +'px');
 		$(document).scroll(function() {
 			var scrollNumber= $(document).scrollTop() * speed;
 			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop()) + 'px');
-	        
-	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2.top + 120) + 'px');
-	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3.top + 120) + 'px');
+	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber.top) + 'px');
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2.top) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3.top) + 'px');
 	    });
 	}
 	
