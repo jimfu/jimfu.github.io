@@ -1,0 +1,76 @@
+<!DOCTYPE>
+<html>
+<head>
+	<link rel="icon" href="favicon.ico">
+	<title>西子灣沙灘會館 Sunset Beach Resort</title>
+	<meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta property="og:url" content="http://">
+    <meta property="og:title" content="西子灣沙灘會館">
+    <meta property="og:description" content="西子灣沙灘會館 - 讓您擁有最美的沙灘婚禮">
+    <meta property="og:type" content="高雄 西子灣 沙灘 婚禮">
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+	<link href='http://fonts.googleapis.com/css?family=Asap:400,700' rel='stylesheet' type='text/css'>
+
+<div id="quote">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur asperiores repellendus similique doloremque quas provident facilis tempora voluptatem temporibus ut, corporis, ipsa illum est vero velit soluta, saepe quidem dicta.</div>
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  <style>
+  body{
+  font-family: 'Asap', Arial, Helvetica, sans-serif;
+  color:white;
+  background:white; url(http://s.cdpn.io/16327/texture_bg.jpg) no-repeat 50% 0px;
+  overflow:hidden;
+}
+
+#quote{
+  -webkit-transform: translate3d(0, 0, 0);
+  font-size:24px;
+  line-height:36px;
+  color:#00b4ff;
+  margin:50px auto;
+  width:800px;
+}
+
+
+
+  </style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script src="http://www.greensock.com/js/src/utils/SplitText.min.js"></script>
+</body>
+<script>
+$(function(){
+	
+
+var mySplitText = new SplitText("#quote"),
+    tl = new TimelineLite(),
+    numWords = mySplitText.chars.length;
+
+for(var i = 0; i < numWords; i++){
+  tl.from(mySplitText.chars[i], 2, {force3D:true, x:Math.random() * 500, y:Math.random() * 500, scale:Math.random() * 2, opacity:0}, Math.random());
+}
+		
+
+
+
+
+
+
+});
+</script>
+</html>
