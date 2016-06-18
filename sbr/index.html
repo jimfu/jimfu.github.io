@@ -64,7 +64,7 @@
 					在西子灣絕美的夕陽晚景與徐徐海風中，打造令妳難忘的幸福時刻 !
 				</p>
 			</div>
-			<div class="introBackground wedding easyme"  id="intro2">
+			<div class="introBackground wedding easyme"  id="intro1">
 			</div>
 		</section>
 		<section class="para">
@@ -91,7 +91,7 @@
 					</p>
 					<i class=""></i>
 			</div>
-			<div class="introBackground dissert easyme" id="intro1">
+			<div class="introBackground dissert easyme" id="intro2">
 			</div>
 		</section>
 		<section class="">
@@ -172,6 +172,7 @@ $(function(){
 	$('.hideme').waypoint(function() {
 		$(this.element).addClass('fadeInUp');
 	},{offset: '70%'});
+
 	// $('.easyme').waypoint(function() {
 	// 	$(this.element).addClass('fadeIn');
 	//},{offset: '70%'});  
@@ -184,17 +185,20 @@ $(function(){
 	var calNumber3 = $('#intro3').position();
 	console.log(calNumber.top);
 	console.log(calNumber2.top);
-	console.log(calNumber3.top);
+	console.log(calNumber3.top + $(document).scrollTop());
+	console.log(screen.height);
+	$('#intro1').css('background-position', '50% ' + ($(document).scrollTop() - calNumber.top + 120 ) + 'px');
 	
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-		var speed = 0.7;
+		var speed = 1;
 
-		$('.introBackground').css('background-size', 'initail');
+		$('.introBackground').css('background-size', 'auto ' + screen.height*1.2 +'px');
 		$(document).scroll(function() {
-			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber) + 'px');
-	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber1) + 'px');
-	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed + calNumber2) + 'px');
+			var scrollNumber= $(document).scrollTop() * speed;
+			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop()) + 'px');
+	        
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber2.top + 120) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed - calNumber3.top + 120) + 'px');
 	    });
 	}
 	

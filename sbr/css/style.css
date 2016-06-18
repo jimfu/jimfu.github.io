@@ -473,5 +473,15 @@ section:nth-child(6) .intro h1:after{
 	    background-attachment: initial;
 	    background-position: 50% 0;
 	}
+	.dissert{
+    	background-image: url(../img/dissert_background_m.jpg);
+	}
+
+	.wedding{
+	    background-image: url(../img/wedding_background_m.jpg);
+	}
+	.rooms{
+	    background-image: url(../img/room_background_m.jpg);
+	}
 
 }
