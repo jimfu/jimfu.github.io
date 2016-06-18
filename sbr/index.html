@@ -114,19 +114,55 @@
 
 		<section class="formZone">
 		<hr>
-			<div class="intro hideme">
-				<h1>高級度假會館</h1>
-				<p>寬廣遼闊的面海窗台，在碧海晨光間醒來，
-					<br>喚醒你的不是鬧鐘，而是陽光和大海。
-					<br><br>印入眼簾的海景洗去一身的疲憊，帶給你一個全然的放鬆空間。
-
-					<br><br>無論是放鬆之旅、商務旅行、還是家庭旅行，
-					<br>西子灣沙灘會館將讓你體會一個難忘的南灣風情，享受西子灣的絕美夕陽和迷人的海景。
-
-					<br><br>西子灣沙灘會館，
-					給你電影般的動人回憶。
+			<div class="allService">
+				<h1>線上預約</h1>
+				<p>西子灣沙灘會館有著高雄最美麗的沙灘與美食，讓你有個美好的度假。<br>
+					我們提供以下服務，可打電話聯絡我們，或填妥右邊表單，我們會盡快跟你聯繫。
 				</p>
+				<ul>
+					<li><i>高雄西子灣沙灘婚禮</i></li>
+					<li><i>沙灘會館海景下午茶</i></li>
+					<li><i>高級度假會館</i></li>
+				</ul>
+				<p><br>有任何問題或需求，也請不吝嗇連絡我們。</p>
+				<div>
+					<img class="logo" src="img/logo.png">
+					<div class="contactInfo">
+						<div>
+							<i class="fa fa-map-marker"></i> 
+							<i>高雄市鼓山區蓮海路 51號</i>
+							<button class="mapBtn">map</button>
+						</div>
+						<div>
+							<i class="fa fa-phone"></i> 
+							<i>(07) 525 - 0005</i>
+						</div>						
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="foot">© COPYRIGHT 2016 | SUNSET BEACH RESORT</div>
 			</div>
+			<div class="paper">
+				<div class="paper_content">
+					<input type="text" placeholder="您的大名">
+					<input type="text" placeholder="您的電話">
+					<div class="half">
+						<input type="email" placeholder="您的信箱">
+					</div>
+					<div class="half last">
+						<input type="text" placeholder="您的LINE ID">
+					</div>
+					<div class="clear"></div>
+					<textarea placeholder="告訴我們您的需求"></textarea>
+					<div>
+						<div class="certifyCode">
+						</div>
+						<button>送出表單</button>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="clear"></div>
 		</section>
 
 	</div>
@@ -178,27 +214,27 @@ $(function(){
 	// 	$(this.element).addClass('fadeIn');
 	//},{offset: '70%'});  
 	$('.bookingNow').on('click',function(){
-			console.log('haha');
-			$("html, body").animate({ scrollTop: $(document).height() }, 1000);
+			console.log('p'+($(document).height()-100));
+			$("html, body").animate({ scrollTop: $(document).height()  }, 1000);
 	});
-	var calNumber = $('#intro1 .back').position();
-	var calNumber2 = $('#intro2 .back').position();
-	var calNumber3 = $('#intro3 .back').position();
+	var calNumber = $('#intro1').position();
+	var calNumber2 = $('#intro2').position();
+	var calNumber3 = $('#intro3').position();
 	console.log(calNumber.top);
 	console.log(calNumber2.top);
 	console.log(calNumber3.top);
 	console.log(screen.height);
 	
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-		var speed =0.1;
+		var speed =0.7;
 
-		$('.introBackground .back').css({'background-size':'100% auto','background-attachment':'scroll'});
+		$('.introBackground').css({'background-size':'100% auto','background-attachment':'scroll'});
 		$(document).scroll(function() {
 			var scrollNumber= $(document).scrollTop() * speed;
-			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop()) + 'px');
-	        $('#intro1 .back').css('transform', 'translate3d(0,' + (calNumber.top + screen.height - $('#intro1 .back').scrollTop()*speed) + 'px'+',0)');
-	        $('#intro2 .back').css('transform', 'translate3d(0,' + (calNumber2.top + screen.height - $(document).scrollTop()*speed) + 'px'+',0)');
-	        $('#intro3 .back').css('transform', 'translate3d(0,' + (calNumber3.top + screen.height - $(document).scrollTop()*speed) + 'px'+',0)');
+			$('.slogan').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
+	        $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
+	        $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
+	        $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
 	    });
 	}
 	

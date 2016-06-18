@@ -170,8 +170,8 @@ section{
     margin: 10px 0 10px 20px;
 }
 
-section:nth-child(4) .intro h1:before,
-section:nth-child(4) .intro h1:after{
+section:nth-child(5) .intro h1:before,
+section:nth-child(5) .intro h1:after{
 	background-color: #38609e;
 }
 section:nth-child(6) .intro h1:before,
@@ -259,6 +259,129 @@ section:nth-child(6) .intro h1:after{
 }
 .formZone{
 	padding:130px 100px 0 100px;
+	text-align: left;
+	overflow-y: hidden;
+}
+.formZone h1{
+	text-align: left;
+}
+.allService{
+	width: 55%;
+	float:left;
+	display: inline-block;
+	padding:30px;
+    box-sizing: border-box;
+}
+.allService p{
+    font-size: 18px;
+    line-height: 27px;
+    color: #333;
+    padding-right: 50px;
+}
+.allService ul{
+	padding:0;
+	list-style-type: none;
+	font-size: 18px;
+}
+.allService li{
+	padding:18px 0;
+}
+.allService li:before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #80b92e;
+    border-radius: 100px;
+    display: inline-block;
+    margin: 2px 20px 2px 10px;
+}
+.allService li:nth-child(2):before{
+	background-color: #38609e;
+}
+.allService li:nth-child(3):before{
+	background-color: #eaa91b;
+}
+.allService .logo{
+	padding-left: 0;
+	padding-bottom: 20px;
+}
+.allService .foot{
+	font-size: 12px;
+	padding-bottom: 50px;
+}
+.allService .contactInfo{
+	margin-bottom: 20px;
+}
+.paper{
+	width: 45%;
+	float:right;
+	display: inline-block;
+	padding: 50px 65px 0 0;
+    box-sizing: border-box;
+}
+.paper_content{
+	padding:50px;
+	background-color: #e8e8e8;
+	position:relative;
+	    z-index: 1;
+	
+}
+.paper_content:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+ /*   max-height: 100vh; */
+    bottom: -300px;
+    background-color: #e8e8e8;
+ z-index: -1;
+    box-shadow: 0 0 0 1px white,0 15px 13px rgba(0, 0, 0, 0.4);
+
+}
+.paper_content input{
+	width:100%;
+	font-style: italic;
+	margin-bottom: 20px;
+	padding:15px;
+	background: none;
+	border:none;
+	border-bottom:1px solid #333;
+}
+.paper_content .half{
+	width: 50%;
+	display: inline-block;
+	float:left;
+	box-sizing: border-box;
+}
+.paper_content .last{
+	padding-left: 15px;
+}
+.paper_content textarea{
+	background: none;
+	width: 100%;
+	max-width: 100%;
+	min-height: 200px;
+	padding:15px;
+	margin-top: 15px;
+	font-style: italic;
+}
+.paper_content .certifyCode{
+	width: 60%;
+	display: inline-block;
+	float: left;
+	padding:15px;
+}
+.paper_content button{
+	width: 40%;
+	float:right;
+	border:none;
+    background-color: #80b92e;
+    padding:15px;
+    color:white;
+    box-shadow: 0 15px 25px  rgba(128, 185, 46, 0.47);
 }
 /*.parallax{
 	background-attachment: initial;
@@ -370,6 +493,18 @@ section:nth-child(6) .intro h1:after{
 	.btnGroup .bookingNow{
 		padding: 0 25px;
 	}
+	.allService .logo{
+		height: 40px;
+	}
+	.allService .contactInfo{
+		padding-right: 0;
+	}
+	.paper{
+		padding-right: 0
+	}
+	.allService{
+		padding:0;
+	}
 
 }
 
@@ -377,7 +512,7 @@ section:nth-child(6) .intro h1:after{
 	.slogan h1{
 		/*font-size: 3vw;*/
 	}
-	.contactInfo{
+	.header .contactInfo{
 		display: none;
 	}
 	.middle{
@@ -385,6 +520,21 @@ section:nth-child(6) .intro h1:after{
 	}
 	.loveText{
 		padding: 50px;
+	}
+	.allService .contactInfo{
+		margin-top: 0;
+	}
+	.allService,.paper{
+		width: 100%;
+	}
+	.paper{
+		padding:0;
+	}
+	.logo{
+		padding-right: 0;
+	}
+	.btnGroup{
+		margin-left: 0;
 	}
 	
 }
@@ -483,5 +633,22 @@ section:nth-child(6) .intro h1:after{
 	.rooms{
 	    background-image: url(../img/room_background_m.jpg);
 	}
-
+	.formZone{
+		padding:40px;
+	}
+	.paper_content{
+		padding:20px;
+	}
+	.paper_content .half{
+		width: 100%;
+	}
+	.paper_content .last{
+		padding:0;
+	}
+	.paper_content .certifyCode{
+		width: 100%;
+	}
+	.paper_content button{
+		width: 100%;
+	}
 }
