@@ -787,6 +787,7 @@ button,textarea,input,a{
 	}
 	.allService .contactInfo{
 		margin-top:0; 
+	    height: auto;
 	}
 	.mobileVersion .container{
 		/*padding-top: calc(100vh - 120px );*/
@@ -842,5 +843,15 @@ button,textarea,input,a{
 	section:nth-child(6) .intro h1{
     	color: #eaa91b;
     	border-color:#eaa91b;
+	}
+	.allService .logo{
+		width: 100%;
+		height: auto;
+	}
+	.contactInfo .fa{
+		display: none;
+	}
+	.contactInfo i{
+    	white-space: nowrap;
 	}
 }
