@@ -14,10 +14,9 @@
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <script type="text/javascript" src="https://www.google.com/recaptcha/api.js"></script>
 
 </head>
-<body class=>
+<body>
 	<div class="slogan">
 		<div class="shadow"></div>
 		<div class="middle">
@@ -26,6 +25,8 @@
 		</div>
 	</div>
 	<div class="container">
+
+		<!-- head button bar -->
 		<div class="header">
 			<img class="logo" src="img/logo.png">
 			<div class="contactInfo">
@@ -41,13 +42,14 @@
 			</div>
 			<div class="btnGroup">
 				<button class="bookingNow">線上預約</button>
-				<button class="simpChinese">簡中</button>
-				<button class="tradChinese active">繁中</button>
+				<button class="simpChinese languageBtn">簡中</button>
+				<button class="tradChinese languageBtn active">繁中</button>
 			</div>
 		</div>
 		<div class="clear"></div>
 		
-		<section class="">
+		<!-- section wedding -->
+		<section class="para">
 			<div class="intro ">
 				<h1 class="hideme">高雄西子灣沙灘婚禮</h1>
 				<p class="hideme">想辦場經典的異國風沙灘婚禮嗎?
@@ -66,9 +68,10 @@
 					在西子灣絕美的夕陽晚景與徐徐海風中，打造令妳難忘的幸福時刻 !
 				</p>
 			</div>
-			<div class="introBackground wedding"  id="intro1">
-			</div>
+			<div class="introBackground wedding"  id="intro1"></div>
 		</section>
+
+		<!-- section wedding 2 -->
 		<section class="para">
 			<div class="rightHalf">
 				<div class="loveText">
@@ -80,23 +83,24 @@
 				<img src="img/photo-1459501462159-97d5bded1416.jpg">
 				<img src="img/photo-1463097769237-a14ad08ff22b.jpg"> 
 			</div>
-			
-			<div style="clear:both"></div>
+			<div class="clear"></div>
 		</section>
-		<section>
+
+		<!-- section tea time -->
+		<section class="para">
 			<div class="intro ">
-					<h1 class="hideme">沙灘會館海景下午茶</h1>
-					<p class="hideme">面對西子灣遼闊海洋與潔白沙灘，您會想要在艷陽下戲水，或者舒舒服服的享受一頓英式下午茶?
-						<br><br>在這裡兩種選擇您可以一次擁有!
-						<br><br>西子灣沙灘會館海景餐廳的全景落地玻璃設計，坐擁絕佳海景視野，搭配經典英式下午茶以及精緻餐點，成為您來到高雄西子灣的另外一個放鬆選擇。
-						<br><br>為您與好姊妹安排一場悠閒的海洋午茶約會吧!
-					</p>
-					<i class=""></i>
+				<h1 class="hideme">沙灘會館海景下午茶</h1>
+				<p class="hideme">面對西子灣遼闊海洋與潔白沙灘，您會想要在艷陽下戲水，或者舒舒服服的享受一頓英式下午茶?
+					<br><br>在這裡兩種選擇您可以一次擁有!
+					<br><br>西子灣沙灘會館海景餐廳的全景落地玻璃設計，坐擁絕佳海景視野，搭配經典英式下午茶以及精緻餐點，成為您來到高雄西子灣的另外一個放鬆選擇。
+					<br><br>為您與好姊妹安排一場悠閒的海洋午茶約會吧!
+				</p>
 			</div>
-			<div class="introBackground dissert" id="intro2">
-			</div>
+			<div class="introBackground dissert" id="intro2"></div>
 		</section>
-		<section class="">
+
+		<!-- section room -->
+		<section>
 			<div class="intro ">
 				<h1 class="hideme">高級度假會館</h1>
 				<p class="hideme">寬廣遼闊的面海窗台，在碧海晨光間醒來，
@@ -110,12 +114,11 @@
 					給你電影般的動人回憶。
 				</p>
 			</div>
-			<div class="introBackground rooms" id="intro3">
-			</div>
+			<div class="introBackground rooms" id="intro3"></div>
 		</section>
 
 		<section class="formZone para">
-		<hr>
+			<hr>
 			<div class="allService">
 				<h1>線上預約</h1>
 				<p>西子灣沙灘會館有著高雄最美麗的沙灘與美食，讓你有個美好的度假。<br>
@@ -158,7 +161,9 @@
 					<textarea placeholder="告訴我們您的需求"></textarea>
 					<div>
 						<div class="certifyCode">
-							<div class="g-recaptcha" data-sitekey=""></div>
+						
+						<!-- here is for certify code -->
+
 						</div>
 						<button>送出表單</button>
 					</div>
@@ -172,90 +177,36 @@
 	</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
 <script src="js/jquery.waypoints.min.js"></script>
-</body>
+
 <script>
 
-// function parallaxEffect() {
-// 	var parallax = document.querySelectorAll(".parallax"),
-//       speed = 0.5;
-
-// 	window.onscroll = function(){
-// 		[].slice.call(parallax).forEach(function(el,i){
-
-// 		  var windowYOffset = window.pageYOffset,
-// 		      elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
-
-// 		  el.style.backgroundPosition = elBackgrounPos;
-
-// 		});
-// 	};
-// }
-
-// function determinMobile(){
-// 	if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { 
-// 		console.log('ios');
-// 		$('.slogan').addClass('parallax');
-// 		$('.introBackground').addClass('parallax');
-// 		// $('.intro p').css('background','red');
-// 		parallaxEffect();
-
-// 	} else if (/(Android)/i.test(navigator.userAgent)) { 
-// 		$('.slogan').addClass('parallax');
-// 		$('.introBackground').addClass('parallax');
-// 		console.log('android');
-// 		parallaxEffect();
-// 		} else { console.log('pc');
-// 	}; 
-// }
-
 $(function(){
+	//判斷移動裝置
 	if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { 
-	// 	var speed =0.7;
 		$('body').addClass('mobileVersion');
-		$('.introBackground').addClass('hideme');
-		
+		$('.introBackground').addClass('hideme');		
 	}
+
+	//waypoint
 	$('.hideme').waypoint(function() {
 		$(this.element).addClass('fadeInUp');
-		console.log('haha')
 	},{offset: '70%'});
 	
-	// $('.easyme').waypoint(function() {
-	// 	$(this.element).addClass('fadeIn');
-	//},{offset: '70%'});  
+	//點擊預定按鈕
 	$('.bookingNow').on('click',function(){
-			console.log('p'+($(document).height()-100));
-			$("html, body").animate({ scrollTop: $(document).height()  }, 1000);
+		$("html, body").animate({ scrollTop: $(document).height()  }, 1000);
 	});
 
-	$('.simpChinese').on('click',function(){
+	//語言切換
+	$('.languageBtn').on('click',function(){
+		$('.languageBtn').removeClass('active');
 		$(this).addClass('active');
-		$('.tradChinese').removeClass('active');
 	});
-	$('.tradChinese').on('click',function(){
-		$(this).addClass('active');
-		$('.simpChinese').removeClass('active');
-	});
-	var calNumber = $('#intro1').position();
-	var calNumber2 = $('#intro2').position();
-	var calNumber3 = $('#intro3').position();
-	console.log(calNumber.top);
-	console.log(calNumber2.top);
-	console.log(calNumber3.top);
-	console.log(screen.height);
-	
-	
-	// 	$('.introBackground').css({'background-size':'100% auto','background-attachment':'scroll'});
-	// 	$(document).scroll(function() {
-	// 		var scrollNumber= $(document).scrollTop() * speed;
-	// 		$('.slogan').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	//         $('#intro1').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	//         $('#intro2').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	//         $('#intro3').css('background-position', '50% ' + ($(document).scrollTop() * speed) + 'px');
-	//     });
-	// }
-	
-	
 });
+
 </script>
+
+
+</body>
+
 </html>
