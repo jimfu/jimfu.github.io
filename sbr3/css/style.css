@@ -155,8 +155,72 @@ section{
 .intro{
 	padding-bottom: 50px;
 	background-color: white;
+	position: relative;
+    overflow: hidden;
 }
 
+.intro:before{
+	content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: -13vh;
+    left: 17%;
+    width: 70vh;
+    height: 70vh;
+    background: url("../img/wedding_gr1.png") no-repeat;
+    background-size: 100% auto;
+    opacity: .4;
+    transition: all 1s;
+    transform: scale(.1, .1) translate3d(250px,250px,0);
+}
+.intro:after{
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: -10vh;
+    right: 31%;
+    width: 30vh;
+    height: 30vh;
+    background: url("../img/wedding_gr2.png") no-repeat;
+    background-size: 100% auto;
+    opacity: .4;
+    transition: all 1.3s;
+    transform: scale(.1, .1) translate3d(-250px,250px,0);
+}
+
+section:nth-child(5) .intro:before{
+	background: url("../img/dissert_gr1.png") no-repeat;
+	background-size: 100% auto;
+}
+section:nth-child(5) .intro:after{
+	background: url("../img/dissert_gr2.png") no-repeat;
+	background-size: 100% auto;
+}
+section:nth-child(6) .intro:before{
+	background: url("../img/room_gr1.png") no-repeat;
+	background-size: 100% auto;
+}
+section:nth-child(6) .intro:after{
+	background: url("../img/room_gr2.png") no-repeat;
+	background-size: 100% auto;
+}
+
+.intro.blurDot:before{
+	opacity: .7;
+    -webkit-transform:  scale(1, 1) translate3d(0,0,0);
+    -moz-transform: scale(1.8, 1.8);
+    -ms-transform: scale(1.8, 1.8);
+    -o-transform: scale(1.8, 1.8);
+    transform:  scale(1, 1) translate3d(0,0,0);
+}
+.intro.blurDot:after{
+	opacity: .7;
+    -webkit-transform:  scale(1, 1) translate3d(0,0,0);
+    -moz-transform: scale(1.8, 1.8);
+    -ms-transform: scale(1.8, 1.8);
+    -o-transform: scale(1.8, 1.8);
+    transform:  scale(1, 1) translate3d(0,0,0);
+}
 .intro h1{
 	position: relative;
 	padding:70px 15px 30px 15px;
@@ -202,7 +266,7 @@ section:nth-child(6) .intro h1:after{
 	padding:40px;
 	font-size: 18px;
 	line-height: 27px;
-	color:#898989;
+	color: #555555;
 }
 
 .test{
@@ -529,6 +593,8 @@ button.active:hover:before{
 
 button,textarea,input,a{ outline: 0; }
 
+
+/*************************************/
 @-webkit-keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -542,7 +608,7 @@ button,textarea,input,a{ outline: 0; }
             transform: none;
   }
 }
-/*************************************/
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -556,8 +622,41 @@ button,textarea,input,a{ outline: 0; }
             transform: none;
   }
 }
+/*************************************/
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0,0,0);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: translate3d(0,0,0);
 
+  }
 
+  100% {
+    opacity: .4;
+    -webkit-transform: translate3d(500px,500px,0);
+    -moz-transform: scale(1.8, 1.8);
+    -ms-transform: scale(1.8, 1.8);
+    -o-transform: scale(1.8, 1.8);
+    transform: translate3d(500px,500px,0);
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 60px, 0);
+            transform: translate3d(0, 60px, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
 /*************************************/
 @-webkit-keyframes beats {
   0% {
