@@ -157,20 +157,21 @@ section{
 	background-color: white;
 	position: relative;
     overflow: hidden;
+    z-index: 0;
 }
 
 .intro:before{
 	content: "";
     position: absolute;
     z-index: 0;
-    top: -13vh;
+    top: -10vh;
     left: 17%;
     width: 70vh;
     height: 70vh;
     background: url("../img/wedding_gr1.png") no-repeat;
     background-size: 100% auto;
     opacity: .4;
-    transition: all 1s;
+    transition: all 2s ease-out;
     transform: scale(.1, .1) translate3d(250px,-250px,0);
 }
 .intro:after{
@@ -179,13 +180,14 @@ section{
     z-index: 0;
     bottom: -10vh;
     right: 31%;
-    width: 30vh;
-    height: 30vh;
+    width: 40vh;
+    height: 40vh;
     background: url("../img/wedding_gr2.png") no-repeat;
     background-size: 100% auto;
     opacity: .4;
-    transition: all 1.3s;
+    transition: all 2.3s ease-out;
     transform: scale(.1, .1) translate3d(-250px,250px,0);
+    z-index: -1;
 }
 
 section:nth-child(5) .intro:before{
@@ -902,5 +904,8 @@ button,textarea,input,a{ outline: 0; }
 	}
 	.contactInfo i{
     	white-space: nowrap;
+	}
+	.intro p{
+		font-size: 2.5vh;
 	}
 }
