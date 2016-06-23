@@ -163,7 +163,7 @@ section{
 	content: "";
     position: absolute;
     z-index: 0;
-    bottom: -13vh;
+    top: -13vh;
     left: 17%;
     width: 70vh;
     height: 70vh;
@@ -171,7 +171,7 @@ section{
     background-size: 100% auto;
     opacity: .4;
     transition: all 1s;
-    transform: scale(.1, .1) translate3d(250px,250px,0);
+    transform: scale(.1, .1) translate3d(250px,-250px,0);
 }
 .intro:after{
     content: "";
