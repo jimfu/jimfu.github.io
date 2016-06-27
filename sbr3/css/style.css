@@ -523,7 +523,7 @@ section:nth-child(6) .intro h1:after{
 	float: left;
 	padding:15px 0;
     box-sizing: border-box;
-    margin-top: 30px;
+/*    margin-top: 30px;*/
 }
 
 .paper_content button{
@@ -978,5 +978,8 @@ button,textarea,input,a{ outline: 0; }
 	}
 	.intro p{
 		font-size: 2.5vh;
+	}
+	.paper_content button{
+		margin-top: 15px;
 	}
 }
