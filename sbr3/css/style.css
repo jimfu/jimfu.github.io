@@ -311,7 +311,7 @@ section:nth-child(6) .intro h1:after{
 
 .wedding{ background-image: url(../img/wedding_background.jpg); }
 
-.rooms{ background-image: url(../img/room_background.jpg); }
+.rooms{ background-image: url(../img/rent_background.jpg); }
 
 .leftHalf{
 	display: inline-block;
@@ -377,7 +377,7 @@ section:nth-child(6) .intro h1:after{
 }
 
 .formZone{
-	padding:130px 100px 0 100px;
+	padding:70px 100px 0 100px;
 	text-align: left;
 	overflow-y: hidden;
 }
@@ -622,6 +622,18 @@ button.active:hover:before{
 .fadeIn{
 	-webkit-animation-name: fadeInUp;
 	animation-name: fadeInUp;
+}
+
+.aboutUs{
+	width:100%;
+	
+}
+.aboutUs h1{
+	color: white;
+	background-color: #402f26;
+}
+.aboutUs p{
+	/*color:white;*/
 }
 
 button,textarea,input,a{ outline: 0; }
@@ -948,7 +960,9 @@ button,textarea,input,a{ outline: 0; }
 		width: 100%;
 	}
 	.allService p{
+		font-size: 2.5vh;
 		padding-right: 0;
+
 	}
 	.intro h1{
 	    max-width: 80%;
