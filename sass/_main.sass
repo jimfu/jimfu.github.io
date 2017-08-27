@@ -1,0 +1,1084 @@
+body
+    background-color: #000
+    // background: url('../img/bg.jpg')
+    // background-size: cover
+    position: relative
+    font-family: 'cere'
+    // overflow-x: hidden
+
+#loader
+    display: flex
+    width: 100%
+    height: 100%
+    align-items: center
+    justify-content: center
+    background-color: black
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 1000000
+    +transition(all 500ms ease)
+    &.animated 
+        @include animation(ycollapsed .35s 1 $bounce-tempo)
+
+.size
+    // width: $logo-width
+    // height: $logo-height
+    @include jim-logo(80px)
+    
+    // margin: 200px auto
+
+.jim
+    width: inherit
+    height: inherit
+
+    .text-j
+        position: absolute
+        left: percentage(1 / 6)
+        width: percentage(1 / 6)
+        height: percentage(2 / 3)
+        +perspective(250)
+
+        &:before
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            @include jb(80px)
+            // border-width: $logo-unit $logo-unit 0 0
+            border-color: rgba($logo-color, .3) transparent transparent transparent
+            position: absolute
+            top: 100%
+            +transform-origin(left, top)
+            +transform-style(preserve-3d)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(yflip 1s infinite alternate $bounce-tempo)
+
+        &:after
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            @include ja(80px)
+            border-color: transparent transparent rgba($logo-color, .75) transparent 
+            position: absolute
+            top: 100%
+            left: -100%
+            +transform-origin(100%, 50%)
+            +transform-style(preserve-3d)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(xflip 1.5s infinite alternate $bounce-tempo)
+
+        .bar-item
+            width: 100%
+            height: 100%
+            background-color: rgba($logo-color, .3)
+            // +perspective(10)
+            +transform-origin(100%, 50%)
+            +transform-style(preserve-3d)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(xflip .5s infinite alternate $bounce-tempo)
+
+    .text-i
+        position: absolute
+        left: percentage(2 / 6)
+        width: percentage(1 / 6)
+        height: 100%
+
+        // background-color: rgba($logo-color, .5)
+        
+
+        &:before
+            content: ''
+            display: block
+            width: 100%
+            height: percentage(2 / 6)
+            position: absolute
+            background-color: rgba($logo-color, .5)
+            // top: 2 * $logo-unit
+            top: 0
+            +transform-origin(100%, 0)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(yexpand .5s infinite alternate $bounce-tempo)
+
+        &:after
+            content: ''
+            display: block
+            width: 100%
+            height: 100%
+            position: absolute
+            background-color: rgba($logo-color, .5)
+            // top: 2 * $logo-unit
+            top: 0
+            +transform-origin(100%, 100%)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(yexpand 1s infinite alternate $bounce-tempo)
+
+    .text-m
+        position: absolute
+        left: percentage(1 / 2)
+        top: 0
+        width: 50%
+        height: 100%
+        +perspective(250)
+        // width: percentage(1 / 2)
+        
+
+        &:before
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            @include mb(80px)
+            // border-width: $logo-unit*3 $logo-unit*3 0 0 
+            border-color: rgba($logo-color, .3) transparent transparent transparent 
+            position: absolute
+            top: 0
+            left: 0
+            +transform-origin(50%, 0)
+            +transform-style(preserve-3d)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(yflip 1.2s infinite alternate $bounce-tempo)
+
+        &:after
+            content: ''
+            display: block
+            width: 0
+            height: 0
+            border-style: solid
+            @include ma(80px)
+            // border-width: 0 $logo-unit*3 $logo-unit*3 0 
+            border-color: transparent rgba($logo-color, .3)  transparent transparent 
+            position: absolute
+            +transform-origin(100%, 50%)
+            +transform-style(preserve-3d)
+            +transform(translate(0, 0) rotate(0) scale(1))
+            +transition(transform 500ms $bounce-tempo )
+            // @include animation(xflip .7s infinite alternate $bounce-tempo)
+    &:hover
+        cursor: pointer
+        .text-j
+            &:before
+                // +transform(translate(-20px, -30px) rotate(30deg) scale(1))
+                +transform(rotate(3610deg))
+            &:after
+                // +transform(translate(-10px, 5px) rotate(10deg) scale(1.5))
+                +transform(rotate(360deg))
+            .bar-item
+                // +transform(translate(0px, 24px) rotate(-13deg) scale(.7))
+                +transform(rotate(360deg))
+
+        .text-i
+            
+            &:before
+                // +transform(translate(-5px, -15px) rotate(20deg) scale(1.5))
+                +transform(rotate(30deg))
+            &:after
+                // +transform(translate(5px, 0px) rotate(45deg) scale(.5))
+                +transform(rotate(360deg))
+        .text-m
+
+            &:before
+                // +transform(translate(20px, 0px) rotate(40deg) scale(.8))
+                +transform(rotate(360deg))
+            &:after
+                // +transform(translate(20px, 40px) rotate(30deg) scale(1))
+                +transform(rotate(360deg))
+.logo-animated
+    .text-j
+        &:before
+            @include animation(yflip 1.5s infinite alternate $bounce-tempo)
+
+        &:after
+            @include animation(xflip 1.5s infinite alternate $bounce-tempo)
+
+        .bar-item
+            @include animation(xflip 1.5s infinite alternate $bounce-tempo)
+
+    .text-i
+        &:before
+            @include animation(yexpand 1.5s infinite alternate $bounce-tempo)
+
+        &:after
+            @include animation(yexpand 1.5s infinite alternate $bounce-tempo)
+
+    .text-m
+        &:before
+            @include animation(yflip 1.5s infinite alternate $bounce-tempo)
+
+        &:after
+            @include animation(xflip 1.5s infinite alternate $bounce-tempo)
+
+
+
+.clear 
+    clear: both
+
+.right-head
+    position: absolute
+    right: 50px
+    top: 50px
+.hero-bg
+    position: fixed
+    display: block
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    // background: url('../img/bg.jpg')
+    background-size: cover
+    background-position: center bottom
+    z-index: -1
+
+.say-hello
+    padding: 50px
+    min-height: calc(100vh - 100px)
+    box-sizing: border-box
+    position: relative
+    
+    .combo
+        // margin-bottom: 10px
+    .combo:nth-child(2) 
+        .cover-content, .text-content 
+            +animation-delay(300ms)
+
+    .combo:nth-child(3)
+        .cover-content, .text-content 
+            +animation-delay(450ms)
+
+    .combo:nth-child(4)
+        .cover-content, .text-content 
+            +animation-delay(600ms)
+
+    .combo:nth-child(5)
+        .cover-content, .text-content 
+            +animation-delay(750ms)
+    .big-title .text-content
+        line-height: 1.13
+.big-title
+    font-size: 72px
+    color: #fff
+    font-family: 'cere-eb'
+    margin: 0
+    position: relative
+    display: inline-block
+
+    .text-content
+        opacity: 0
+    .cover-content
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        display: block
+        background-color: $main-color
+        +transform(scaleX(0))
+            
+    &.animated
+        .text-content
+            @include animation(textanimation .75s 1 forwards $bounce-tempo)
+        .cover-content
+            @include animation(baranimation .75s 1 forwards $bounce-tempo)
+          
+
+p 
+    font-family: 'cere-eb'
+    font-size: 24px
+    color: $fade-color
+    margin: 15px 0 0
+    line-height: 1.3
+
+
+.trigger-p 
+    opacity: 0
+    +transform(translateY(50px))
+    +transition(all 1000ms cubic-bezier(0.55, 0.085, 0, 0.99))
+
+    a
+        position: relative
+        text-decoration: none
+        color: #777
+        z-index: 1
+
+        &:before
+            content: ""
+            display: block
+            position: absolute
+            width: 105%
+            bottom: 0
+            left: 0
+            height: 10%
+            z-index: -1
+            background-color: rgba(255, 255, 255, 0.35)
+            +transform-origin(left, top)
+            +transition(all 500ms cubic-bezier(0.55, 0.085, 0, 0.99) .5s)
+            +transform(translate(-2.5%, 0) scaleX(0))
+        &:after
+            content: ""
+            display: block
+            position: absolute
+            width: 105%
+            bottom: 0
+            left: 0
+            height: 10%
+            z-index: -1
+            background-color: rgba($main-color, 1)
+            +transform-origin(left, top)
+            +transform(translate(-2.5%, 0) scaleX(0.04))
+            +transition(all 250ms cubic-bezier(0.55, 0.085, 0, 0.99))
+        &:hover
+            color: white
+            &:after
+                background-color: rgba($main-color, .7)
+                +transform(translate(-2.5%, 0) scaleX(1))
+    &.animated
+        +transform(translateY(0))
+        opacity: 1
+        
+        a:before
+            +transform(translate(-2.5%, 0) scaleX(1))
+.featured-projects
+    padding: 15px
+    
+    .project 
+        padding: 15px
+        display: inline-block
+        float: left
+        box-sizing: border-box
+        cursor: pointer
+        // position: relative
+        // z-index: 0
+        
+        .project-background
+            border-radius: 5px
+            position: relative
+            overflow: hidden
+            width: 100%
+            height: 100%
+
+        .project-name
+            font-size: 400px
+            font-family: 'cere-eb'
+            z-index: 0
+            position: absolute
+            line-height: 1
+            color: white
+            opacity: .2
+            +transition(all 500ms cubic-bezier(0.55, 0.085, 0, 0.99))
+        .product
+            // display: block
+            // height: 100%
+            background-repeat: no-repeat
+            position: relative
+            z-index: 1
+            +transition(all 1000ms cubic-bezier(0.55, 0.085, 0, 0.99))
+
+        &:hover
+            // +transform(scale(1.1))
+            // +transition(all 1000ms cubic-bezier(0.55, 0.085, 0, 0.99))
+            // z-index: 1
+            .project-name
+                opacity: 1
+                
+    .ukeas
+        width: percentage(2/3)
+        height: 32vw
+
+        .project-background
+            // text-align: left
+            @include linearGradient-h(#ff5656, #0613c0)
+            
+        .product
+            width: 100%
+            +transform(translate(0, 20%) scale(.8))
+            
+        .project-name
+            top: 0
+            right: -25%
+
+        &:hover
+            .project-name
+                +transform(translate(50px, 0))
+            .product
+                +transform(translate(0, 20%) scale(.85))
+            
+    .aigroup
+        width: percentage(1/3)
+        height: 64vw
+        float: right
+
+        .project-background
+            @include linearGradient-v(#8e8e8e, #ececec)
+            
+        .product
+            width: 100%
+            +transform(translate(8%, 32%) scale(.8))
+            
+        .project-name
+            bottom: 0
+            left: 60%
+            +transform(translate(0, 0) rotate(-90deg))
+            +transform-origin(left, bottom, 0)
+        &:hover
+            .project-name
+                +transform(translate(0, 250px) rotate(-90deg))
+            .product
+                +transform(translate(8%, 22%) scale(.8))
+    .goaway
+        width: percentage(2/3)
+        height: 32vw
+
+        .project-background
+            // text-align: right
+            @include linearGradient-v(#00dce0, #00efbf)
+            
+        .product
+            width: 100%
+            +transform(translate(18%, 18%) scale(.8))
+            
+        .project-name
+            top: 20%
+            left: 0
+            opacity: .35
+
+        &:hover
+            .project-name
+                +transform(translate(-250px, 0))
+            .product
+                +transform(translate(20%, 10%) scale(.8))
+.uppertext
+    color: white
+    padding: 15px 35px
+    text-transform: uppercase
+    font-size: 24px
+    font-family: 'cere'
+    letter-spacing: 5px 
+
+
+
+
+
+.announce
+    padding: 100px 0
+    max-width: 60%
+    margin: 0 auto
+
+.resume
+    padding: 200px 100px
+    border-top: 2px solid $fade-color
+    border-bottom: 2px solid $fade-color
+    background-color: #000
+    position: relative
+    margin-bottom: 80px
+    // +transition(padding 200ms $bounce-tempo)
+    > .uppertext
+        cursor: pointer
+        +transition(text-shadow 300ms $bounce-tempo)
+    &:hover
+        > .uppertext
+            text-shadow: 0px 0px 15px #54ffff
+
+.color-ball
+    // width: 20px
+    // height: 20px
+    // border-radius: 100%
+    display: inline-block
+    position: relative
+    vertical-align: middle
+    // position: absolute
+    // left: auto
+    
+    
+    // @include linearGradient-h($main-color, #fff)
+    // @include animation(rotateball 1.5s infinite linear)
+    // +transform(scale(25, 25))
+    
+    &:before
+        content: ''
+        width: 25vw
+        height: 25vw
+        display: block
+        border-radius: 100%
+        @include linearGradient-h($main-color, #fff)
+        +transform-origin(left, top)
+        margin-bottom: -300px
+        +transition(500ms $bounce-tempo)
+        // +transform(scale(25, 25))
+    &:after
+        // content: 'about jim'
+        // color: white
+        // position: absolute
+        // left: 100%
+
+    &.animated:before
+        width: 1.5vw
+        height: 1.5vw
+        margin-bottom: 0
+
+        // @include animation(minimize 0.5s 1 linear forwards)
+        // +transform(scale(1,1))
+
+.resume-content
+    // margin-top: 400px
+    padding: 50px
+    display: none
+
+    .uppertext
+        padding: 0
+    
+    .brief
+        padding: 15px
+        margin-bottom: 50px
+        p 
+            font-size: 18px
+            font-family: cere
+            margin-top: 30px
+.half
+    width: 50%
+    display: inline-block
+    padding: 0 15px
+    float: left
+    box-sizing: border-box
+    overflow: hidden
+
+.work-flow
+    margin-top: 30px
+    position: relative
+
+    &:before
+        content: ''
+        width: 1px 
+        height: 100%
+        display: block
+        background-color: rgba(255,255,255,.35)
+        position: absolute
+        top: 0
+        left: 4px
+        bottom: 0   
+
+    li
+        position: relative
+        margin-left: 30px
+        &:before
+            content: ''
+            width: 10px
+            height: 10px
+            display: block
+            position: absolute
+            background-color: $main-color
+            border-radius: 100%
+            left: -30px
+            box-shadow: 0 0 0 5px black
+
+        .role 
+            color: white
+            font-size: 18px
+            margin-bottom: 10px
+        .period
+            color: white
+            font-size: 14px
+
+        p 
+            font-size: 18px
+            font-family: cere
+            padding-bottom: 40px
+            margin-top: 10px
+
+    &.no-line:before
+        display: none
+    
+.skill
+    li 
+        display: inline-block
+        float: left
+        padding: 20px
+
+        .skill-icon
+            width: 80px
+            height: 80px
+            background-image: url("../img/skills.png")
+            // box-sizing: border-box
+            // padding: 20px
+
+        &:first-child .skill-icon
+            // background-size: 80px 80px
+            background-position: 0 0
+
+        &:nth-child(2) .skill-icon
+            background-position: -80px 0
+
+        &:nth-child(3) .skill-icon
+            background-position: -160px 0
+
+        &:nth-child(4) .skill-icon
+            background-position: -240px 0
+
+        &:nth-child(5) .skill-icon
+            background-position: -320px 0
+
+        &:nth-child(6) .skill-icon
+            background-position: 0 -80px
+        &:nth-child(7) .skill-icon
+            background-position: -80px -80px
+        &:nth-child(8) .skill-icon
+            background-position: -160px -80px
+        &:nth-child(9) .skill-icon
+            background-position: -240px -80px
+        &:nth-child(10) .skill-icon
+            background-position: -320px -80px
+
+
+        .skill-name 
+            text-align: center
+            font-size: 16px
+            color: #777
+            margin-top: 10px
+
+footer
+    padding: 15px
+    .footer
+        background: rgba(0, 0, 0, .3)
+        padding: 15px
+    .footer-logo
+        display: inline-block
+        margin-right: 5px
+        @include jim-logo(40px)
+
+        .text-j:before
+            @include jb(40px)
+        .text-j:after
+            @include ja(40px)
+        .text-m:before
+            @include mb(40px)
+        .text-m:after
+            @include ma(40px)
+
+    .murmur
+        display: inline-block
+        font-size: 18px
+        font-family: "cere-eb"
+        color: $fade-color
+        overflow: hidden
+        height: 20px
+        
+        .murmur-text
+            @include animation(change 8s infinite $bounce-tempo)
+            li 
+                line-height: 1.2
+    .social-media
+        float: right
+        li 
+            display: inline-block
+            
+            
+
+            &:after
+                content: '|'
+                color: $fade-color
+
+            &:last-child:after
+                content: ''
+
+            a 
+                color: $fade-color
+                padding: 0 5px
+                text-decoration: none
+                position: relative
+
+                &:after
+                    content: attr(data-text)
+                    // padding: 0 5px
+                    position: absolute
+                    left: 5px
+                    width: 0
+                    color: $main-color
+                    overflow: hidden
+                    +transition(width $bounce-tempo 200ms)
+
+                &:hover:after
+                    width: 100%
+                    // z-index: 1
+
+.project-landing
+    min-height: 100vh
+    padding: 50px
+    overflow: hidden
+    position: relative
+    
+    
+    .big-title
+        margin-top: 40vh
+
+        .text-content
+            @include linearGradient-v(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+
+    &:before
+        content: ''
+        display: block
+        position: absolute
+        width: 100%
+        height: 100%
+        left: 0
+        bottom: 0
+        top: 0
+        right: 0
+        background-color: #000
+        z-index: -2
+    &:after
+        content: ''
+        display: block
+        position: absolute
+        width: 0
+        height: 0
+        left: 0
+        top: 0
+        border-style: solid
+        border-width: 80vh 0 80vh 100vw
+        border-color: transparent transparent rgba(0, 0, 0, 1) rgba(0, 0, 0, 1)
+        z-index: -1
+    
+    p 
+        position: relative
+        z-index: 1
+        margin-top: 5px
+    
+    &.ukeas
+        img 
+            // float: right
+            // +transform(translate(10%, -35%) scale(1.4))
+            position: absolute
+            right: -15%
+            // top: 100px
+            bottom: 100px
+            +transform-origin(right, bottom)
+            // +transform(scale(1.4))
+            height: 80%
+        &:before
+            @include linearGradient-h(#0613c0, #ff5656)
+    &.goaway
+        img
+            position: absolute
+            right: 10%
+            bottom: 300px
+            +transform-origin(right, bottom)
+            height: 50%
+        &:before
+            @include linearGradient-h(#00efbf, #00dce0)
+    &.aigroup
+        img
+            position: absolute
+            right: 10%
+            bottom: 100px
+            +transform-origin(right, bottom)
+            height: 80%
+        &:before
+            @include linearGradient-h(#ececec, #8e8e8e)
+
+.project-show
+    padding-top: 200px
+    overflow: hidden
+
+    .project-content
+        float: right
+        max-width: 68%
+        padding: 0 50px
+        box-sizing: border-box
+    
+    
+    &.ukeas
+        margin-bottom: -1600px
+        img
+            margin-top: 100px
+            +transform-origin(100%, 0)
+            +transform(translateX(-210px) rotateX(60deg) rotateY(0deg) rotate(-45deg) scale(1.6))
+    &.goaway
+        .project-content
+            // box-sizing: border-box
+    &.aigroup
+        padding-top: 100px
+        .project-content
+            float: right
+
+.project-foundation
+    // overflow: hidden
+    .project-content
+        // float: right
+        max-width: 60%
+        padding: 0 50px 0 100px
+        
+
+    .project-wireframe
+        margin-top: 100px
+        position: relative
+        overflow: hidden
+
+        
+        img 
+            width: 100%
+        &:before
+            content: ''
+            position: absolute
+            display: block
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 1
+            @include linearGradient-v(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+    &.ukeas
+        margin-top: -100px
+
+    &.goaway
+        position: relative
+        .project-content
+            position: absolute
+            left: 0
+            top: 30%
+            z-index: 2
+        .project-wireframe
+            img
+                +transform-origin(50%, 30%)
+                +transform(rotate(45deg))
+    &.aigroup
+        .project-content
+            // display: inline-block
+            width: 50%
+            box-sizing: border-box
+            position: sticky
+            float: left
+            top: 100px
+            // padding-left: 0
+            padding-right: 15px
+            width: 40%
+            // max-width: 520px
+        .project-wireframe
+            display: inline-block
+            width: 60%
+            &:before
+                display: none
+            img 
+                
+                // +transform(perspective(1920px) rotateX(-23deg) rotateY(-21deg) rotateZ(27deg) skewY(0deg) translateX(50%))
+                // +transform-origin(left, top)
+.project-other
+    margin-top: 200px
+
+    .project-content
+        float: right
+        max-width: 60%
+        padding: 0 50px
+
+    .other-link
+        position: relative
+        margin-top: 100px
+        overflow: hidden
+        a
+            display: inline-block
+            +transition(all $bounce-tempo 200ms)
+
+            img
+                +transform(translateY(100%))
+                box-shadow: 0 30px 30px black
+
+                &.animated
+                    +transform(translateY(0))
+            &:first-child
+                visibility: hidden
+                
+            &:nth-child(2)
+                position: absolute
+                z-index: 0
+                img 
+                    +transition(all $bounce-tempo 1500ms)
+            &:nth-child(3)
+                position: absolute
+                z-index: 2
+
+                img 
+                    +transition(all $bounce-tempo 1000ms)
+            &:last-child
+                position: absolute
+                z-index: 0
+                img 
+                    +transition(all $bounce-tempo 500ms)
+            
+
+                
+
+
+        &.ukeas
+            a 
+                &:first-child
+                    visibility: hidden
+                &:nth-child(2)
+                    left: 0
+                    bottom: -5%
+                &:nth-child(3)
+                    left: 25%
+                    bottom: -12.5%
+                &:last-child
+                    right: -10%
+                    bottom: -25%
+            &:hover
+                a 
+                    opacity: .5
+                    &:hover
+                        +transform(translateY(-20px))
+                        opacity: 1
+                        z-index: 4
+        &.goaway
+            a 
+                &:first-child
+                    visibility: hidden
+                    margin-top: -5%
+                &:nth-child(2)
+                    left: 0
+                    bottom: -15%
+                &:nth-child(3)
+                    left: 25%
+                    bottom: -5%
+        &.aigroup
+            a 
+                pointer-events: none
+                &:first-child
+                    visibility: hidden
+                    // margin-top: -5%
+                &:nth-child(2)
+                    right: 20%
+                    bottom: -40%
+                    z-index: 3
+                &:nth-child(3)
+                    right: 10%
+                    bottom: -20%
+                    
+                &:nth-child(4)
+                    right: 0
+                    bottom: 0
+    .invisible
+        visibility: hidden
+
+
+.next-project
+    padding: 200px 100px
+    box-shadow: 0 0 0 1px $fade-color
+    z-index: 5
+    position: relative
+    .uppertext
+        float: left
+    .big-title
+        float: right
+        cursor: pointer
+        +transition(all $bounce-tempo 200ms)
+        .text-content
+            opacity: .5
+
+        &:hover
+            +transform(translateX(-20px))
+            .text-content
+                opacity: 1
+
+.lauch-link
+    color: $main-color
+    padding: 15px 0
+    margin-top: 35px
+    text-transform: uppercase
+    font-size: 24px
+    font-family: "cere"
+    letter-spacing: 5px
+    display: inline-block
+    text-decoration: none
+    position: relative
+    z-index: 1
+    +transition(all 500ms $bounce-tempo)
+    &:before
+        content: ''
+        display: block
+        width: 200%
+        height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        background-color: $main-color
+        // opacity: 0
+        +transition(all 500ms $bounce-tempo)
+        +transform(translateX(-120%))
+        z-index: -1
+
+    &:hover
+        color: black
+        &:before
+            // opacity: 1
+            +transform(translateX(-40%))
+
+.goaway-g
+    fill: none
+    stroke: white
+    stroke-width: 0
+    stroke-dasharray: 2000, 2000
+.goaway-b
+    opacity: 0
+.animated
+    .goaway-g    
+        +animation(logog 2s both)
+    .goaway-b
+        +animation(logob 2s both)
+    // opacity: 0
+
+.project-logo
+    width: 32%
+    text-align: right
+    padding-right: 100px
+    display: inline-block
+    box-sizing: border-box
+
+    // .project-content
+    //     box-sizing: border-box
+
+.app-link
+    margin-top: 25px
+    display: inline-block
+    padding: 15px 20px
+    border-radius: 15px
+    color: white
+    text-decoration: none
+    background-color: rgba(255, 255, 255, .05)
+    margin-right: 20px
+    +transition(background-color 200ms $bounce-tempo)
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .4)
+    img 
+        display: inline-block
+        vertical-align: middle
+    .market-name
+        display: inline-block
+        vertical-align: middle
+        .name-top
+            font-size: 19px
+        .name-bottom
+            font-size: 34px
+
+    &:hover
+        background-color: rgba(255, 255, 255, .1)
+
+.blur-secret
+    height: 50vh
+    padding-top: 100px
+    padding-bottom: 30vh
+.ai-pic1, .ai-pic2
+    background-image: url('../img/ai_pics1.png')
+    width: 100%
+    height: 50%
+    background-size: auto 100%
+    +animation(rightCarosal 35s linear infinite alternate)
+.ai-pic2
+    background-image: url('../img/ai_pics2.png')
+    +animation(leftCarosal 35s linear infinite alternate)
