@@ -1,4 +1,4 @@
-@media (max-width: 1000px)
+@media (max-width: 1200px)
 	.say-hello
 		padding: 25px
 	.big-title
@@ -169,6 +169,7 @@
 			display: none
 		.uppertext
 			padding: 15px 0
+			float: none
 		.big-title	
 			float: left
 
@@ -204,5 +205,34 @@
 				font-size: 15px
 			.name-bottom
 				font-size: 25px
-	.project-foundation.goaway
+	.ai-pic1, .ai-pic2
+		img 
+			+animation(rightCarosal 5s linear infinite alternate)
+	.ai-pic2
+		img
+			+animation(leftCarosal 5s linear infinite alternate)
 		
+@media (max-height: 1050px)
+	.project-landing
+		&.ukeas img
+			height: 72%
+		&.goaway img
+			bottom: 30%
+			right: 5%
+	.project-other .other-link.ukeas a
+		&:nth-child(2)
+			right: 0
+			bottom: -20%
+			left: 0
+			top: auto
+		&:nth-child(3)
+			right: -27%
+			bottom: -15%
+			left: 27%
+			top: auto
+		&:nth-child(4)
+			right: -66%
+			bottom: -10%
+			left: 66%
+			top: auto
+			z-index: 3
