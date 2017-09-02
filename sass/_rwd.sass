@@ -27,15 +27,37 @@
 				width: auto
 				height: auto
 				+transform-origin(0, 0)
-		.ukeas .product
-			+transform(translate(0, 100px))
-			width: 100%
-		.aigroup .product
-			+transform(translate(10%, 50px))
-			width: 80%
-		.goaway .product
-			+transform(translate(10%, 100px))
-			width: 120%
+			&:hover
+				.project-name
+					+transform(rotate(0deg))
+		.ukeas
+			.product
+				+transform(translate(0, 100px))
+				width: 100%
+			&:hover
+				.project-name
+					+transform(translate(50px, 0))
+				.product
+					+transform(translate(0, 90px))
+
+		.aigroup 
+			.product
+				+transform(translate(10%, 50px))
+				width: 80%
+			&:hover
+				.project-name
+					+transform(translate(50px, 0))
+				.product
+					+transform(translate(0, 90px))
+		.goaway 
+			.product
+				+transform(translate(10%, 100px))
+				width: 120%
+			&:hover
+				.project-name
+					+transform(translate(50px, 0))
+				.product
+					+transform(translate(0, 90px))
 	.announce
 		max-width: none
 		padding: 50px 25px
@@ -211,7 +233,11 @@
 	.ai-pic2
 		img
 			+animation(leftCarosal 5s linear infinite alternate)
+	.color-ball.animated:before 
+		width: 3vw
+		height: 3vw
 		
+
 @media (max-height: 1050px)
 	.project-landing
 		&.ukeas img
