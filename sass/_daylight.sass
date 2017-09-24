@@ -1,0 +1,153 @@
+// .logo-animated
+//     .text-j
+//         &:before
+//             +transform-origin(center, 0)
+//             overflow: hidden
+
+//             @include animation(sorttopmylate 1.5s infinite alternate $bounce-tempo)
+//         .bar-item
+
+//             +transform-origin(center, 0)
+//             @include animation(sorttopmylate 1.5s infinite alternate $bounce-tempo)
+//         &:after
+
+//             +transform-origin(center, 0)
+//             @include animation(sortbottomy 1.5s infinite alternate $bounce-tempo)
+//     .text-i
+//         &:before
+
+//             +transform-origin(center, 0)
+//             @include animation(sorttopmy 1.5s infinite alternate $bounce-tempo)
+
+//         &:after
+
+//             +transform-origin(center, 0)
+//             @include animation(sortbottomylate 1.5s infinite alternate $bounce-tempo)
+
+//     .text-m
+//         &:before
+
+//             +transform-origin(center, 0)
+//             @include animation(sorttopmylate 1.5s infinite alternate $bounce-tempo)
+
+//         &:after
+
+//             +transform-origin(center, 0)
+//             @include animation(sortbottomy 1.5s infinite alternate $bounce-tempo)
+            
+.light
+    background-color: #f2f2f2
+    .big-title
+        font-family: 'cere'
+        color: #333
+        .cover-content
+            background-color: #000
+    .bubble-wrap
+        opacity: .1
+
+    .uppertext
+        font-family: 'cere'
+        color: #333
+
+    .trigger-p
+        font-family: 'cere'
+        color: #555
+    .featured-projects .project 
+        .project-background
+            box-shadow: 0 23px 15px -15px #c1c1c1
+
+            &:after
+                background-color: #f2f2f2
+            .project-name
+                color: #000
+                font-family: 'cere'
+        &.goaway
+            .project-name
+                opacity: .2
+        .product
+            // display: none
+        &.ukeas .project-background,
+        &.goaway .project-background,
+        &.aigroup .project-background
+            background: white
+
+    .resume
+        background-color: #FFF
+        border: none
+
+    .color-ball:before
+        @include linearGradient-h($light-color, $main-color)
+    .work-flow 
+        li
+            &:before
+                background-color: $light-color
+                box-shadow: 0 0 0 5px #fff
+
+            .role
+                color: #333
+
+            .period 
+                color: #333
+        &:before
+            background-color: rgba(0 ,0 ,0 ,0.35)
+    .skill li .skill-icon
+        box-shadow: 0 3px 10px 0px #c1c1c1
+        border-radius: 20px
+    footer 
+        .footer
+            background: rgba(242, 242, 242, 0.5)
+        .social-media li a:after
+            color: #000
+    .text-j:before
+        border-color: rgba($fade-color, .3) transparent transparent transparent
+    .text-j:after
+        border-color: transparent transparent rgba($fade-color, .75) transparent 
+    .text-j
+        .bar-item
+            background-color: rgba($fade-color,.3)
+    .text-i:before
+        background-color: rgba($fade-color,.5)
+    .text-i:after
+        background-color: rgba($fade-color,.5)
+    .text-m:before
+        border-color: rgba($fade-color, .3) transparent transparent transparent 
+    .text-m:after
+        border-color: transparent rgba($fade-color, .3)  transparent transparent 
+        
+    .project-landing.ukeas,
+    .project-landing.goaway,
+    .project-landing.aigroup,
+        &:before
+            background: white
+        &:after
+            border-color: transparent transparent #f2f2f2 #f2f2f2
+
+    .project-foundation .project-wireframe:before
+        // @include linearGradient-v(rgba(242, 242, 242, 1), rgba(242, 242, 242, 0))
+        background: none
+
+    .goaway-g
+        stroke: #555
+    .animated .goaway-g
+        +animation(lightlogog 2s both)
+    .trigger-p a
+        &:before
+            background-color: $main-color
+        &:hover
+            color: #000
+    .next-project
+        background-color: #fff
+        box-shadow: 0 0 0 1px #d4d4d4
+    .lauch-link
+        color: white
+        &:before
+            background-color: #000
+            +transform(translateX(-40%))
+        &:hover
+            color: white
+    .project-other .other-link a img
+        box-shadow: 0 30px 30px #aaa
+    .app-link
+        background-color: rgba(0, 0, 0, 0.25)
+        &:hover
+            background-color: rgba(0, 0, 0, 0.5)

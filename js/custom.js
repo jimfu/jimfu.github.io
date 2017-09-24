@@ -31,6 +31,15 @@ window.addEventListener('load', function (e) {
     },1500);
 }, false);
 
+function dayAndNight(){
+  var whatTimeIsIt = new Date().getHours();
+  if( 18 > whatTimeIsIt > 6 ){
+      $('body').addClass('light');
+  }else{
+      return;
+  }
+}
+
 $(function(){
     $('.ukeas-link').on('click',function(){
         location.href = 'ukeas.html';
@@ -43,7 +52,8 @@ $(function(){
     });
     $('.jim').on('click',function(){
         location.href = 'index.html';
-    })
+    });
+    dayAndNight();
 });
 
 

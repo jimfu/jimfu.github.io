@@ -154,16 +154,16 @@ body
             display: block
             width: 0
             height: 0
+            top: 0
+            left: 0
             border-style: solid
             @include ma(80px)
-            // border-width: 0 $logo-unit*3 $logo-unit*3 0 
             border-color: transparent rgba($logo-color, .3)  transparent transparent 
             position: absolute
             +transform-origin(100%, 50%)
             +transform-style(preserve-3d)
             +transform(translate(0, 0) rotate(0) scale(1))
             +transition(transform 500ms $bounce-tempo )
-            // @include animation(xflip .7s infinite alternate $bounce-tempo)
     &:hover
         cursor: pointer
         .text-j
@@ -172,12 +172,12 @@ body
             +animation-delay(0)
         .text-i
             +transform-origin(center, top)
-            @include animation(logoHover 400ms 1 forwards linear)
-            +animation-delay(200ms)
+            @include animation(logoHover 550ms 1 forwards linear)
+            +animation-delay(0)
         .text-m
             +transform-origin(center, top)
-            @include animation(logoHover 400ms 1 forwards linear)
-            +animation-delay(400ms)
+            @include animation(logoHover 700ms 1 forwards linear)
+            +animation-delay(0)
             
 .logo-animated
     .text-j
@@ -263,6 +263,7 @@ canvas
             +animation-delay(750ms)
     .big-title .text-content
         line-height: 1.13
+        text-transform: uppercase
         .nothing
             color: black
 .big-title
@@ -760,7 +761,7 @@ footer
         margin-top: 40vh
 
         .text-content
-            @include linearGradient-v(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
+            // @include linearGradient-v(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0))
 
     &:before
         content: ''

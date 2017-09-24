@@ -120,6 +120,22 @@
 		fill: white
 		stroke-width: 0
 
+@include keyframes(lightlogog)
+	0%
+		stroke-dashoffset: -2000
+		stroke-width: 1
+		fill: #f2f2f2
+
+	75%
+		stroke-dashoffset: 0
+		stroke-width: 1
+		fill: #f2f2f2
+		// fill: url(#a1)
+
+	100% 
+		fill: #f2f2f2
+		stroke-width: 0
+
 @include keyframes(logob)
 	0%
 		opacity: 0
@@ -142,3 +158,92 @@
 
 	100%
 		+transform(translateX(-50%))
+
+@include keyframes(sortbottomy)
+	0% 
+		opacity: 0
+		+transform(translateY(-25px))
+	50%
+		opacity: 1
+		+transform(translateY(0))
+	100%
+		opacity: 0
+		+transform(translateY(25px))
+
+@include keyframes(sortbottomylate)
+	0% 
+		opacity: 0
+		+transform(translateY(-50px))
+	50%
+		opacity: 1
+		+transform(translateY(0))
+	100%
+		opacity: 0
+		+transform(translateY(50px))
+
+@include keyframes(sorttopmy)
+	0% 
+		opacity: 0
+		+transform(translateY(25px))
+	50%
+		opacity: 1
+		+transform(translateY(0))
+	100%
+		opacity: 0
+		+transform(translateY(-25px))
+
+@include keyframes(sorttopmylate)
+	0% 
+		opacity: 0
+		+transform(translateY(50px))
+	50%
+		opacity: 1
+		+transform(translateY(0))
+	100%
+		opacity: 0
+		+transform(translateY(-50px))
+
+@include keyframes(op)
+	0% 
+		opacity: 0
+		
+	70%
+		opacity: 1
+	75%
+		opacity: 0
+	80%
+		opacity: 1
+	95%
+		opacity: .5		
+	100%
+		opacity: 1
+
+@include keyframes(opa)
+	0% 
+		opacity: 0
+		
+	50%
+		opacity: 1
+	55%
+		opacity: 0
+	70%
+		opacity: 1
+	75%
+		opacity: .5		
+	100%
+		opacity: 1	
+
+@include keyframes(opb)
+	0% 
+		opacity: 0
+		
+	20%
+		opacity: 1
+	45%
+		opacity: 0
+	60%
+		opacity: 1
+	95%
+		opacity: .5		
+	100%
+		opacity: 1	
