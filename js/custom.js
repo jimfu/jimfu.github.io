@@ -34,7 +34,7 @@ window.addEventListener('load', function (e) {
 function dayAndNight(){
   var whatTimeIsIt = new Date().getHours();
   console.log(whatTimeIsIt);
-  if( whatTimeIsIt > 6 || whatTimeIsIt < 18){
+  if( whatTimeIsIt > 6 && whatTimeIsIt < 18){
       $('body').addClass('light');
       console.log('really: ' + whatTimeIsIt);
   }else{
