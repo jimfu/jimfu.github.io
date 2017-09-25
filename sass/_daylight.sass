@@ -151,3 +151,20 @@
         background-color: rgba(0, 0, 0, 0.25)
         &:hover
             background-color: rgba(0, 0, 0, 0.5)
+
+    .day-and-night
+        .period
+            span 
+                +transform(rotate(180deg))
+    .day-and-night .switcher
+        span:first-child
+            color: white
+        span:last-child
+            color: #393939
+    .menu-bar:before, .menu-bar:after
+        background-color: #777
+
+    .project-show.ukeas:before
+        @include linearGradient-v(rgba(242, 242, 242, 0), rgba(242, 242, 242, 1))
+    .project-foundation.goaway p
+        color: #333

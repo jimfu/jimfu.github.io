@@ -33,10 +33,12 @@ window.addEventListener('load', function (e) {
 
 function dayAndNight(){
   var whatTimeIsIt = new Date().getHours();
-  console.log(whatTimeIsIt);
-  if( whatTimeIsIt > 6 && whatTimeIsIt < 18){
+  var colors = {"teal": "font-weight: bold; color: #5FB3B3;","orange": "font-weight: bold; color: #F99157;"}
+  console.log('%cHour is:'+ ' %c' + whatTimeIsIt, colors.teal, colors.orange );
+  if( whatTimeIsIt > 6 &&
+   whatTimeIsIt < 19){
       $('body').addClass('light');
-      console.log('really: ' + whatTimeIsIt);
+
   }else{
       return;
   }
@@ -52,8 +54,11 @@ $(function(){
     $('.aigroup-link').on('click',function(){
         location.href = 'aigroup.html';
     });
-    $('.jim').on('click',function(){
+    $('.jim, .jim-link').on('click',function(){
         location.href = 'index.html';
+    });
+    $('.menu-bar').on('click',function(){
+        $(this).toggleClass('active').next('.menu').toggleClass('active')
     });
     dayAndNight();
 });
